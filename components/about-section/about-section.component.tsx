@@ -308,7 +308,7 @@ const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
 	margin: 0 3rem 0 1.5rem;
-	max-width: 70rem;
+	max-width: 80rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0rem 1.5rem 0;
@@ -330,7 +330,7 @@ const LabelContainer = styled.div`
 	font-size: 2.5rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-left: 3rem;
+		margin-left: 7rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 3.5rem;
 		}
@@ -363,7 +363,7 @@ const ContentContainer = styled.div`
 			max-width: 75rem;
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			padding: 4rem 3rem 3rem;
+			padding: 4rem 7rem 5rem;
 
 			h2 {
 				font-size: 4rem;
@@ -376,7 +376,7 @@ const ContentContainer = styled.div`
 			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				padding: 4rem 4rem 4rem;
+				padding: 4rem 7rem 5rem;
 
 				h2 {
 					font-size: 6rem;
@@ -396,7 +396,7 @@ const PartnersContainer = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
-	margin: 2rem 0 2rem;
+	margin: 3rem 0 3rem;
 	/* width: 100%; */
 	gap: 1.5rem;
 
@@ -416,9 +416,9 @@ const PartnersContainer = styled.div`
 		justify-content: flex-start;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			figure {
-				width: 12rem;
-				height: 12rem;
-				padding: 2.5rem;
+				width: 10rem;
+				height: 10rem;
+				padding: 1.5rem;
 			}
 		}
 	}
@@ -443,29 +443,6 @@ const AnimationContainer = styled(motion.figure)`
 		}
 	}
 `
-
-// const ButtonsContainer = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	gap: 1rem;
-// 	width: 100%;
-// 	/* margin: 2rem 0; */
-
-// 	button {
-// 		/* font-size: 1.2rem; */
-// 		width: 100%;
-// 		font-weight: 600;
-// 		/* padding: 1rem 1rem 0.8rem; */
-// 	}
-// 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-// 		flex-direction: row;
-
-// 		button {
-// 			width: fit-content;
-// 			font-size: 1.8rem;
-// 		}
-// 	}
-// `
 
 const ButtonsContainer = styled.div`
 	grid-area: b;

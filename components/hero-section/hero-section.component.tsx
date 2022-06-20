@@ -490,8 +490,8 @@ const ContentContainer = styled.div`
 		grid-template-columns: auto 1fr 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h h i d d"
-			"b b i p p";
+			"h h i  d"
+			"b b i  p";
 		min-height: 45rem;
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -509,24 +509,17 @@ const HeadContainer = styled.div`
 		display: inline-block;
 		font-family: "Avenir Next";
 		line-height: 1.2;
-		font-weight: 500;
+		font-weight: 600;
 		padding-bottom: 1rem;
 		/* padding-right: 4rem; */
 		span {
 			display: block;
 			font-size: 4.5rem;
 		}
-
-		@media all and (max-width: 355px) {
-			span {
-				font-size: 3.5rem;
-			}
-		}
 	}
 
 	p {
 		/* margin-top: 2rem; */
-		border-top: 1px solid #fff;
 		padding-top: 2rem;
 		margin-bottom: 2rem;
 
@@ -544,9 +537,8 @@ const HeadContainer = styled.div`
 		h1 {
 			span {
 				font-size: 8rem;
-				line-height: 1.1;
+				line-height: 1;
 			}
-			border-bottom: 1px solid #fff;
 		}
 		p {
 			border-top: unset;
@@ -572,11 +564,13 @@ const ImageContainer = styled.figure`
 	align-items: center;
 	width: 100%;
 	justify-content: center;
-	margin-left: -2rem;
+	/* margin-left: -2rem; */
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	figure {
 		position: relative;
 		width: 17rem;
-		height: 23rem;
+		/* height: 23rem; */
 		/* margin-bottom: 4rem; */
 		/* border: 1px solid green; */
 	}
@@ -586,7 +580,7 @@ const ImageContainer = styled.figure`
 		figure {
 			position: relative;
 			width: 25rem;
-			height: 30rem;
+			/* height: 30rem; */
 			margin-bottom: 4rem;
 			margin-right: 5rem;
 			/* border: 1px solid green; */
@@ -595,7 +589,7 @@ const ImageContainer = styled.figure`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			figure {
 				width: 46rem;
-				height: 60rem;
+				/* height: 60rem; */
 				margin-bottom: 4rem;
 				margin-right: -10rem;
 				/* border: 1px solid green; */
@@ -613,7 +607,7 @@ const DateContainer = styled.div`
 	max-width: 10rem;
 	/* border: 1px solid green; */
 	justify-self: end;
-	font-size: 1.6rem;
+	font-size: 3rem;
 	line-height: 1.1;
 	text-align: center;
 	margin-top: 0.7rem;
@@ -635,7 +629,7 @@ const DateContainer = styled.div`
 				width: 100%;
 				height: 0.3rem;
 				background-color: ${({ theme }) => theme.fonts.primary};
-				margin-left: 1.5rem;
+				margin-left: 0.5rem;
 			}
 		}
 	}
@@ -652,13 +646,17 @@ const DateContainer = styled.div`
 				width: 100%;
 				height: 0.3rem;
 				background-color: ${({ theme }) => theme.fonts.primary};
-				margin-right: 1.5rem;
+				margin-right: 0.5rem;
 			}
 		}
 	}
 	p:nth-of-type(3) {
 		/* border: 1px solid green; */
-		font-size: 3.5rem;
+		font-size: 3rem;
+	}
+	p:nth-of-type(4) {
+		/* border: 1px solid green; */
+		font-size: 3rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -674,12 +672,12 @@ const DateContainer = styled.div`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			/* width: 100%; */
 			max-width: 15rem;
-			p {
+			/* p {
 				font-size: 4.4rem;
 			}
 			p:nth-of-type(4) {
 				font-size: 5.2rem;
-			}
+			} */
 		}
 	}
 `
@@ -688,81 +686,17 @@ const ButtonsContainer = styled.div`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1rem;
+	gap: 2rem;
 	align-self: end;
 	align-items: center;
-	justify-content: space-between;
-	width: 100%;
+	/* justify-content: space-between; */
+	/* width: 100%; */
 	/* margin: 2rem 0; */
 
 	button {
-		/* position: absolute; */
-		display: flex;
-		flex-direction: column;
-		/* top: 65%; */
-		/* width: calc(100% - 3rem); */
-		font-family: "Avenir Next";
-
-		font-size: 2rem;
-		font-weight: 700;
-		padding: 1rem 1rem 1rem;
-
-		span {
-			display: block;
-			text-transform: uppercase;
-
-			&:nth-of-type(2) {
-				/* margin-left: 1rem; */
-				font-weight: 900;
-			}
-		}
-	}
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/* flex-gap: 1rem; */
-		/* align-items: end; */
-		justify-content: flex-start;
-		flex-wrap: unset;
-		gap: 2rem;
-
-		button {
-			font-size: 2.5rem;
-			line-height: 1;
-			/* margin-bottom: 1rem; */
-		}
-		button:nth-of-type(1) {
-			/* font-size: 2rem; */
-			/* margin-right: 1rem; */
-		}
-
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			button {
-				width: unset;
-				position: relative;
-				flex-direction: row;
-
-				top: unset;
-				font-weight: 400;
-				/* font-size: 3rem; */
-				padding: 1.8rem;
-
-				span {
-					display: block;
-					text-transform: uppercase;
-
-					&:nth-of-type(2) {
-						margin-left: 1rem;
-						font-weight: 900;
-					}
-				}
-			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				button {
-					font-size: 3rem;
-					padding: 1.8rem 4rem 1.5rem;
-				}
-			}
-		}
+		font-weight: 500;
+		/* padding: 1rem 1rem 1rem; */
+		font-size: 1.7rem;
 	}
 `
 
@@ -774,7 +708,7 @@ const PlaceContainer = styled.div`
 
 	p {
 		font-family: "Acumin Variable Concept";
-		font-weight: 300;
+		/* font-weight: 300; */
 		line-height: 1;
 		font-size: 1.5rem;
 		margin-bottom: -0.3rem;
