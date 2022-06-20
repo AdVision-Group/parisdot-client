@@ -1,7 +1,6 @@
 // Utils
 import React from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
 
 // Components
 import Image from "next/image"
@@ -10,8 +9,29 @@ import Button from "../button/button.component"
 
 // Hooks
 import { useToggle } from "react-use"
+import {
+	motion,
+	useViewportScroll,
+	useTransform,
+	// useSpring,
+} from "framer-motion"
 
 const HeroSection = () => {
+	const { scrollYProgress } = useViewportScroll()
+
+	// scrollYProgress.onChange((e) => console.log(e))
+
+	const transformPA = useTransform(
+		scrollYProgress,
+		[0, 0.14, 1, 1],
+		[0, 150, 150, 150]
+	)
+	const transformRIS = useTransform(
+		scrollYProgress,
+		[0, 0.14, 1, 1],
+		[20, -100, -100, -100]
+	)
+
 	const partners = [
 		{
 			src: "/assets/partners-v2/logos/hdx.png",
@@ -34,10 +54,21 @@ const HeroSection = () => {
 			href: "https://acala.network/",
 		},
 		{
+			src: "/assets/partners-v2/logos/Parity.png",
+			alt: "parity logo",
+			href: "https://www.parity.io/",
+		},
+		{
+			src: "/assets/partners-v2/logos/talisman-logo.png",
+			alt: "talisman logo",
+			href: "https://talisman.xyz/",
+			width: 80,
+		},
+		{
 			src: "/assets/partners-v2/logos/Interplay.png",
 			alt: "interplay logo",
 			href: "https://interplay.iterate.ai/",
-			width: 30,
+			width: 50,
 		},
 		{
 			src: "/assets/partners-v2/logos/Subsquid.png",
@@ -45,33 +76,23 @@ const HeroSection = () => {
 			href: "https://www.subsquid.io/",
 		},
 		{
-			src: "/assets/partners-v2/logos/Parity.png",
-			alt: "parity logo",
-			href: "https://www.parity.io/",
-		},
-		{
 			src: "/assets/partners-v2/ORIGIN-TRAIL.png",
 			alt: "origin trail logo",
 			href: "https://origintrail.io/",
-			width: 50,
+			width: 70,
 		},
-		{
-			src: "/assets/partners-v2/logos/talisman-logo.png",
-			alt: "talisman logo",
-			href: "https://talisman.xyz/",
-			width: 60,
-		},
+
 		{
 			src: "/assets/partners-v2/logos/DFG.png",
 			alt: "dfg logo",
 			href: "https://www.dfg.group/",
-			width: 60,
+			width: 80,
 		},
 		{
 			src: "/assets/partners-v2/logos/Centrifuge.png",
 			alt: "centrifuge logo",
 			href: "https://centrifuge.io/",
-			width: 60,
+			width: 80,
 		},
 		{
 			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
@@ -82,193 +103,307 @@ const HeroSection = () => {
 			src: "/assets/partners-v2/logos/astar.png",
 			alt: "astar logo",
 			href: "https://astar.network/",
-			width: 30,
+			width: 50,
 			height: 40,
 		},
-		{
-			src: "/assets/partners-v2/logos/phala-network-logo-white.png",
-			alt: "phala network logo",
-			href: "https://www.phala.network/en/",
-			width: 70,
-		},
+		// {
+		// 	src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+		// 	alt: "phala network logo",
+		// 	href: "https://www.phala.network/en/",
+		// 	width: 90,
+		// },
 	]
 
 	return (
-		<SectionContainer>
-			<Link href={"/#hackaton-content"} passHref>
-				<a>
-					<ArrowContainer
-					// animate={{
-					// 	y: [0, -5, -10, -7, 0],
-					// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
-					// }}
-					// transition={{
-					// 	repeat: Infinity,
-					// 	ease: "easeInOut",
-					// 	duration: 10,
-					// }}
-					>
-						<Image
-							src={"/assets/arrow-container.svg"}
-							alt="red circle"
-							layout="responsive"
-							width={100}
-							height={100}
-							objectFit="contain"
-						/>
-					</ArrowContainer>
-				</a>
-			</Link>
-			<Container
-			// style={{
-			// 	y: transformX,
-			// }}
-			>
-				<ContentContainer>
-					<AnimationContainer
-						animate={{
-							rotate: [0, 0, 270, 270, 0],
-						}}
-						transition={{
-							repeat: Infinity,
-							duration: 20,
-						}}
-					>
-						<Image
-							src={"/assets/partners/spinner-v2.svg"}
-							alt={"spinner "}
-							width={80}
-							height={80}
-							objectFit="contain"
-						/>
-					</AnimationContainer>
-					{/* <PlayButtonContainer>
-						<motion.figure
-							whileHover={{
-								scale: 1.1,
-							}}
-							whileDrag={{
-								scale: 0.97,
-							}}
-							onClick={toggleModal}
+		<React.Fragment>
+			<WatermarkContainer>
+				<WatermarkLetters
+					style={{
+						x: transformPA,
+						// fontFamily: "Avenir Next",
+						// opacity: transformWatermarkOpacity,
+					}}
+					className="am"
+				>
+					<Image
+						src={"/assets/hero/pa.svg"}
+						alt="st letters"
+						width={200}
+						height={400}
+						layout="responsive"
+						objectFit="contain"
+					/>
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformRIS,
+
+						// opacity: transformWatermarkOpacity,
+					}}
+					className="st-horizontal"
+				>
+					<Image
+						src={"/assets/hero/ris.svg"}
+						alt="st letters"
+						width={200}
+						height={400}
+						layout="responsive"
+						objectFit="contain"
+					/>
+				</WatermarkLetters>
+			</WatermarkContainer>
+			<SectionContainer>
+				<Link href={"/#hackaton-content"} passHref>
+					<a>
+						<ArrowContainer
+						// animate={{
+						// 	y: [0, -5, -10, -7, 0],
+						// 	// scale: [1.2, 1, 0.9, 0.97, 1.2],
+						// }}
+						// transition={{
+						// 	repeat: Infinity,
+						// 	ease: "easeInOut",
+						// 	duration: 10,
+						// }}
 						>
 							<Image
-								src={"/assets/hero-section/circle.svg"}
-								alt={"circle"}
-								width={80}
-								height={80}
+								src={"/assets/hero/arrow-container.svg"}
+								alt="red circle"
+								layout="responsive"
+								width={100}
+								height={100}
 								objectFit="contain"
-								layout="fill"
-								className="circle"
 							/>
-
-							<Image
-								src={"/assets/hero-section/center.svg"}
-								alt={"center "}
-								width={80}
-								height={80}
-								objectFit="contain"
-								layout="fill"
-								className="center"
-							/>
-						</motion.figure>
-					</PlayButtonContainer> */}
-					<HeadContainer>
-						<h1>
-							<span>ONLINE</span>
-							<span>HACK</span>
-						</h1>
-						<p>
-							Selected winners will be invited to present at{" "}
+						</ArrowContainer>
+					</a>
+				</Link>
+				<Container>
+					<ContentContainer>
+						<HeadContainer>
+							<h1>
+								<span>CONF</span>
+								<span>HACK</span>
+							</h1>
+						</HeadContainer>
+						<DateContainer>
+							<p>
+								<span>15</span>
+								<span />
+							</p>
+							<p>
+								<span />
+								<span>19</span>
+							</p>
+							{/* <p>&nbsp;</p> */}
+							<p>JULY</p>
+							<p>2022</p>
+						</DateContainer>
+						<ImageContainer>
+							<figure>
+								<Image
+									src={"/assets/hero/ilustration.svg"}
+									placeholder="blur"
+									blurDataURL="data:image/webp;base64,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"
+									alt="parisDOT ilu"
+									width={150}
+									height={150}
+									objectFit="contain"
+									layout="responsive"
+								/>
+							</figure>
+						</ImageContainer>
+						<ButtonsContainer>
+							<Link href={"/#hackaton-content"} passHref>
+								<a>
+									<Button>BUY TICKETS</Button>
+								</a>
+							</Link>
+							<Link href={"/#bounties"} passHref>
+								<a>
+									<Button outline={"true"}>APPLY TO SPEAK</Button>
+								</a>
+							</Link>
+						</ButtonsContainer>
+						<PlaceContainer>
+							<p>IN PARIS / FRANCE</p>
+						</PlaceContainer>
+					</ContentContainer>
+					<PartnersContainer>
+						{partners.map((partner, idx) => (
 							<a
-								href="https://decoded.polkadot.network/"
+								key={idx}
+								href={partner.href}
 								rel="noopener noreferrer"
 								target="_blank"
 							>
-								Polkadot Decoded (Berlin)
+								<motion.figure
+									whileHover={{
+										scale: 1.05,
+									}}
+									whileTap={{
+										scale: 0.97,
+									}}
+								>
+									<Image
+										src={partner.src}
+										placeholder="blur"
+										blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
+										alt={partner.alt}
+										width={partner.width || 100}
+										height={partner.height || 40}
+										objectFit="contain"
+										layout="fixed"
+									/>
+								</motion.figure>
 							</a>
-						</p>
-					</HeadContainer>
-					<DateContainer>
-						<p>
-							<span>04/20</span>
-							<span />
-						</p>
-						<p>
-							<span />
-							<span>06/20</span>
-						</p>
-						{/* <p>&nbsp;</p> */}
-						<p>2022</p>
-					</DateContainer>
-					<ImageContainer>
-						<figure>
-							<Image
-								src={"/assets/talisman-logo.svg"}
-								placeholder="blur"
-								blurDataURL="data:image/webp;base64,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"
-								alt="tulipan ilu"
-								width={150}
-								height={200}
-								objectFit="contain"
-								layout="responsive"
-							/>
-						</figure>
-					</ImageContainer>
-					<ButtonsContainer>
-						<Link href={"/#hackaton-content"} passHref>
-							<a>
-								<Button>
-									<span>$330k + COMBINED</span> <span>prize pool</span>
-								</Button>
-							</a>
-						</Link>
-						{/* <Link href={"/#bounties"} passHref>
-							<a>
-								<Button outline={"true"}>BOUNTIES</Button>
-							</a>
-						</Link> */}
-					</ButtonsContainer>
-					{/* <PlaceContainer>
-						<p>IN AMSTERDAM / NETHERLANDS</p>
-					</PlaceContainer> */}
-				</ContentContainer>
-				<PartnersContainer>
-					{partners.map((partner, idx) => (
-						<a
-							key={idx}
-							href={partner.href}
-							rel="noopener noreferrer"
-							target="_blank"
-						>
-							<motion.figure
-								whileHover={{
-									scale: 1.05,
-								}}
-								whileTap={{
-									scale: 0.97,
-								}}
-							>
-								<Image
-									src={partner.src}
-									placeholder="blur"
-									blurDataURL="data:image/webp;base64,UklGRoADAABXRUJQVlA4WAoAAAAgAAAAMgEAcAAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCBCAQAA8BMAnQEqMwFxAD7tcq9Sv7KuoqYV6rPwHYlpbt1gaSuAGK1SOgZXCQB+09c5Zv7sniqJ11Rxwb6giHHE70G1m28ifhTEbxgi82TUoOCwTCznCPb1IckV9jaEjcc/wv9uOFdmdFs7+FDOxs9D0DRVtom61OeNstP7gqHIOxoEDMGLZp2WvuIFyAVzyn/abVs2o6Jx5oskSUmNYp4t/Ch2ZXKprEp4t8UQAP7d/gaRycSxAF3HIB/ELSy8eiSWDiQzh/WXsXQItBPQugiG3ytAP1f+vQTSDtoX5+FXBj4lT30wo15TdqxxbBs9pA+bY+nlasVFK95VefsPMdSE/gHqBiVIe4df2Dxap3RkpTuffNtdvSzYxJxRQWf+RW7Jmh4H48fpJaX9UAcx3JDulb9bxilwGWFBmAFddJh7A3kHeQAAAA=="
-									alt={partner.alt}
-									width={partner.width || 80}
-									height={partner.height || 40}
-									objectFit="contain"
-									layout="fixed"
-								/>
-							</motion.figure>
-						</a>
-					))}
-				</PartnersContainer>
-			</Container>
-		</SectionContainer>
+						))}
+					</PartnersContainer>
+				</Container>
+			</SectionContainer>
+		</React.Fragment>
 	)
 }
 
 export default HeroSection
+
+const WatermarkContainer = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	/* bottom: 0; */
+	width: 100%;
+	/* min-height: 100vh; */
+	height: calc(100% + 20rem);
+	overflow: hidden;
+	max-width: 200rem;
+	margin: 0 auto;
+	font-family: "Avenir Next";
+	z-index: 1;
+
+	/* border: 1px solid green; */
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		/* height: 100%; */
+	}
+`
+
+const WatermarkLetters = styled(motion.h2)`
+	position: absolute;
+	overflow: hidden;
+	font-size: 15rem;
+	z-index: -2;
+	color: ${({ theme }) => theme.fonts.primary};
+
+	font-weight: 400;
+
+	&.am {
+		/* border: 1px solid green; */
+		top: 8rem;
+		left: -6rem;
+	}
+	&.st {
+		display: none;
+		width: 20rem;
+		top: 25rem;
+		right: 0rem;
+	}
+	&.st-horizontal {
+		width: 13rem;
+		top: 30rem;
+		right: -5rem;
+	}
+	&.er {
+		display: none;
+		/* width: 5rem; */
+		/* height: 40rem; */
+		/* overflow-wrap: break-word; */
+		top: 40rem;
+		left: 5rem;
+	}
+
+	&.er-horizontal {
+		/* width: 5rem; */
+		/* height: 40rem; */
+		/* border: 1px solid green; */
+		line-height: 1;
+		/* overflow-wrap: break-word; */
+		top: 40rem;
+		left: -2rem;
+		span {
+			display: block;
+		}
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		/* grid-template-columns: 1fr 35rem; */
+		/* background-color: red; */
+		font-size: 30rem;
+
+		&.am {
+			/* border: 1px solid green; */
+			top: 10rem;
+			left: -30rem;
+		}
+		&.st {
+			display: block;
+			width: 35.5rem;
+
+			top: 25rem;
+			right: -15rem;
+		}
+		&.st-horizontal {
+			display: none;
+		}
+		&.er {
+			display: block;
+			/* top: 38rem; */
+			bottom: -10rem;
+
+			left: 10rem;
+		}
+		&.er-horizontal {
+			display: none;
+		}
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			/* grid-template-columns: 1fr 35rem; */
+			/* background-color: red; */
+			/* font-size: 30rem; */
+
+			&.am {
+				top: 7rem;
+				left: -11rem;
+			}
+			&.st {
+				top: 21rem;
+				right: -6rem;
+			}
+			&.er {
+				display: block;
+				bottom: 0rem;
+				left: 30rem;
+			}
+
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+				font-size: 50rem;
+
+				&.am {
+					top: 8rem;
+					left: 0rem;
+				}
+				&.st {
+					width: 70rem;
+
+					top: 27rem;
+					right: 0rem;
+				}
+				&.er {
+					top: 60rem;
+					left: 40rem;
+				}
+			}
+		}
+	}
+`
 
 const ArrowContainer = styled(motion.figure)`
 	position: absolute;
@@ -295,62 +430,6 @@ const ArrowContainer = styled(motion.figure)`
 				bottom: 13rem;
 			}
 		}
-	}
-`
-
-const PlayButtonContainer = styled.div`
-	position: absolute;
-	left: 1.5rem;
-	top: 50%;
-	z-index: 9;
-
-	figure {
-		cursor: pointer;
-		position: relative;
-
-		width: 8rem;
-		height: 8rem;
-
-		.circle {
-			animation-name: rotation;
-			animation-duration: 40s;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-			/* animation-timing-function: ease; */
-		}
-
-		.center {
-			padding: 2.5rem !important;
-		}
-	}
-
-	@keyframes rotation {
-		0% {
-			transform: rotate(0);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		left: unset;
-		right: 3rem;
-	}
-`
-
-const AnimationContainer = styled(motion.figure)`
-	position: absolute;
-	display: flex;
-	justify-conter: center;
-	align-items: center;
-
-	z-index: -1;
-	right: -1rem;
-	top: -4rem;
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		right: -4rem;
-		top: -4rem;
 	}
 `
 
@@ -617,11 +696,11 @@ const ButtonsContainer = styled.div`
 	/* margin: 2rem 0; */
 
 	button {
-		position: absolute;
+		/* position: absolute; */
 		display: flex;
 		flex-direction: column;
-		top: 65%;
-		width: calc(100% - 3rem);
+		/* top: 65%; */
+		/* width: calc(100% - 3rem); */
 		font-family: "Avenir Next";
 
 		font-size: 2rem;
@@ -741,17 +820,17 @@ const PartnersContainer = styled.div`
 	justify-content: center; */
 	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
 	width: 100%;
-	max-width: 36rem;
+	max-width: 70rem;
 	margin-left: auto;
-	gap: 1rem;
-	margin-top: 2rem;
+	gap: 1.5rem;
+	margin: 1rem auto 0;
 	padding-top: 0.5rem;
-	border-top: 1px solid #fff;
 
 	figure {
 		/* border: 1px solid green; */
 		/* width: 7rem; */
-		max-width: 10rem;
+		wdith: 100%;
+		max-width: 15rem;
 		/* height: 3rem; */
 		position: relative;
 	}

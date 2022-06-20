@@ -79,10 +79,10 @@ const Header: React.FC<IProps> = ({
 							<a>
 								<figure className="logo">
 									<Image
-										src={"/assets/Logo-bg.svg"}
+										src={"/assets/header/parisdot_logo.svg"}
 										width={100}
-										height={100}
-										alt={"amsterdot logo"}
+										height={50}
+										alt={"parisDOT logo"}
 										objectFit="contain"
 										layout="responsive"
 									/>
@@ -109,7 +109,7 @@ const Header: React.FC<IProps> = ({
 							>
 								<Link href={"/#bounties"} passHref>
 									<a>
-										<Button>BOUNTIES</Button>
+										<Button>BUY TICKETS</Button>
 									</a>
 								</Link>
 								<a
@@ -117,7 +117,7 @@ const Header: React.FC<IProps> = ({
 									target="_blank"
 									href="https://youtube.com/playlist?list=PLpyT58HowFcU-pM-Q9Ms9eq0mRSP950ky"
 								>
-									<Button outline={"true"}>CONF VIDS</Button>
+									<Button outline={"true"}>APPLY TO SPEAK</Button>
 								</a>
 							</ButtonsContainer>
 						)}
@@ -527,28 +527,6 @@ const Socials = styled.div`
 	justify-self: end;
 	gap: 1rem;
 
-	.after-movie {
-		button {
-			display: none;
-			/* padding: 1.5rem 2.5rem; */
-			margin-right: 1rem;
-			font-size: 1.5rem;
-		}
-
-		@media all and (min-width: 865px) {
-			gap: 1rem;
-
-			button {
-				display: block;
-				/* padding: 1.5rem 2.5rem; */
-				margin-right: 1rem;
-				font-size: 2rem;
-				font-weight: 400;
-				line-height: 1;
-			}
-		}
-	}
-
 	a {
 		/* background-color: ${({ theme }) => theme.background.primary}; */
 		/* padding: 1rem; */
@@ -565,10 +543,13 @@ const Socials = styled.div`
 		border: 3px solid ${({ theme }) => theme.color.primary};
 		border-radius: 50%;
 		padding: 1.5rem;
-		font-size: 2.4rem;
+		font-size: 1.6rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		figure {
+			font-size: 2.4rem;
+		}
 	}
 `
 
@@ -603,13 +584,19 @@ const Container = styled.div`
 	.logo {
 		margin-top: 1rem;
 		position: relative;
-		width: 8rem;
+		width: 10rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-template-columns: auto 1fr auto;
 		grid-template-areas: "l b s";
 		gap: 1.5rem;
+
+		.logo {
+			margin-top: 1rem;
+			position: relative;
+			width: 14rem;
+		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			figure {
