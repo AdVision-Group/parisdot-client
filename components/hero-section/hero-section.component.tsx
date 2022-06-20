@@ -15,8 +15,8 @@ const HeroSection: React.FC = () => {
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformPA = useTransform(scrollYProgress, [0, 0.14], [0, 150])
-	const transformRIS = useTransform(scrollYProgress, [0, 0.14], [0, -100])
+	const transformPA = useTransform(scrollYProgress, [0, 0.14], [0, 0])
+	const transformRIS = useTransform(scrollYProgress, [0, 0.14], [0, 0])
 
 	const partners = [
 		{
@@ -173,12 +173,12 @@ const HeroSection: React.FC = () => {
 						</HeadContainer>
 						<DateContainer>
 							<p>
-								<span>15</span>
+								<span>19</span>
 								<span />
 							</p>
 							<p>
 								<span />
-								<span>19</span>
+								<span>21</span>
 							</p>
 							{/* <p>&nbsp;</p> */}
 							<p>JULY</p>
@@ -406,8 +406,8 @@ const ContentContainer = styled.div`
 		grid-template-columns: auto 1fr auto 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
-			"h h i  d"
-			"b b i  p";
+			"h h i d"
+			"b b i p";
 		min-height: 45rem;
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -504,10 +504,10 @@ const ImageContainer = styled.figure`
 		/* width: 25rem; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			figure {
-				width: 46rem;
+				width: 35rem;
 				/* height: 60rem; */
 				margin-bottom: 4rem;
-				margin-right: -10rem;
+				margin-right: 10rem;
 				/* border: 1px solid green; */
 			}
 		}
@@ -545,6 +545,7 @@ const DateContainer = styled.div`
 				width: 100%;
 				height: 0.3rem;
 				background-color: ${({ theme }) => theme.fonts.primary};
+				margin-right: 0.5rem;
 				margin-left: 0.5rem;
 			}
 		}
@@ -563,6 +564,7 @@ const DateContainer = styled.div`
 				height: 0.3rem;
 				background-color: ${({ theme }) => theme.fonts.primary};
 				margin-right: 0.5rem;
+				margin-left: 0.5rem;
 			}
 		}
 	}

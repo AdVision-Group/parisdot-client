@@ -215,7 +215,7 @@ const WatermarkLetters = styled(motion.h2)`
 	&.t {
 		display: none;
 		top: 20rem;
-		right: 2rem;
+		right: 5rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {

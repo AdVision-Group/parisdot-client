@@ -241,7 +241,7 @@ const Header: React.FC<IProps> = ({
 							</ToggleMobileButton> */}
 
 							<Ul>
-								<li className="first">
+								{/* <li className="first">
 									<Link href={"/#hackaton-content"}>
 										<a onClick={toggleMobileNav}>HACKATON</a>
 									</Link>
@@ -250,25 +250,24 @@ const Header: React.FC<IProps> = ({
 									<Link href={"/#bounties-h"}>
 										<a onClick={toggleMobileNav}>BOUNTIES</a>
 									</Link>
-								</li>
+								</li> */}
 								<li>
 									<Link href={"/#about"}>
-										<a onClick={toggleMobileNav}>WHAT IS amsterDOT</a>
+										<a onClick={toggleMobileNav}>WHAT IS parisDOT</a>
 									</Link>
 								</li>
-								<li>
+								{/* <li>
 									<Link href={"/#after-movie"}>
 										<a onClick={toggleMobileNav}>AFTERMOVIE</a>
 									</Link>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/#day-1"}>
 										<a onClick={toggleMobileNav}>CONFERENCE PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{events.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
 												<a
 													onClick={() => {
 														openEventDayProgram(true, idx, e.id)
@@ -277,19 +276,17 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 1} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
-								<li>
+								</li> */}
+								{/* <li>
 									<Link href={"/#hack-2"}>
 										<a onClick={toggleMobileNav}>WOKSHOP PROGRAM</a>
 									</Link>
 									<NestedUl>
 										{hackatons.map((e, idx) => (
 											<li key={idx}>
-												{/* <Link href={`/#${e.id}`} passHref> */}
 
 												<a
 													onClick={() => {
@@ -299,11 +296,10 @@ const Header: React.FC<IProps> = ({
 												>
 													#{idx + 2} DAY
 												</a>
-												{/* </Link> */}
 											</li>
 										))}
 									</NestedUl>
-								</li>
+								</li> */}
 
 								<li style={{ opacity: 0 }}>x</li>
 								<EmailLi>

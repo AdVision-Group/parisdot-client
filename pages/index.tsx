@@ -141,13 +141,15 @@ const Home: NextPage = () => {
 
 			<HeroSection />
 			<AboutSection />
+			<FooterSection />
+			{/* <EventSection /> */}
+			{/* <HackathonSection /> */}
 			{/* <HackathonSection />
 			<HackatonContentSection /> */}
 			{/* <PricepoolSection /> */}
 			{/* <BountySection />
 			<AftermovieSection />
 		*/}
-			<EventSection />
 
 			{/* <SectionContainer>
 				{events.map((e, idx) => (
@@ -162,8 +164,6 @@ const Home: NextPage = () => {
 					/>
 				))}
 			</SectionContainer> */}
-
-			<HackathonSection />
 
 			{/* <WorkshopSection />
 
@@ -182,7 +182,6 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer> */}
 
-			<FooterSection />
 			<Footer>
 				<a
 					href="https://github.com/AdVision-Group/amsterdot-client"
