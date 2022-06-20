@@ -54,7 +54,7 @@ const HackathonSection = () => {
 				<IluContainer>
 					<figure>
 						<Image
-							src="/assets/rose-primary-ilu.svg"
+							src="/assets/hackaton/ilustration.svg"
 							alt="conf ilu"
 							objectFit="contain"
 							layout="responsive"

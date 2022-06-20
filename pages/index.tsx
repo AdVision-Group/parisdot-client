@@ -14,7 +14,7 @@ import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
 import EventSection from "../components/event-section/event-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
-// import HackathonSection from "../components/hackathon-section/hackathon-section.component"
+import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 // import EventOverview from "../components/event-overview/event-overview.component"
 // import WorkshopSection from "../components/workshop-section/workshop-section.component"
 // import Accordion from "../components/accordion/accordion.component"
@@ -163,7 +163,7 @@ const Home: NextPage = () => {
 				))}
 			</SectionContainer> */}
 
-			{/* <HackathonSection /> */}
+			<HackathonSection />
 
 			{/* <WorkshopSection />
 

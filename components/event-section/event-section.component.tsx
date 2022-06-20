@@ -16,28 +16,6 @@ const EventSection = () => {
 
 	return (
 		<EventSectionContainer>
-			<WatermarkContainer>
-				{/* <Circle1
-					className="first"
-					animate={{
-						scale: [0.95, 1.2, 1, 1.5, 0.95],
-					}}
-					transition={{
-						repeat: Infinity,
-						ease: "easeInOut",
-						duration: 10,
-					}}
-				>
-					<Image
-						src={"/assets/primary-circle.svg"}
-						alt="red circle"
-						layout="responsive"
-						width={100}
-						height={100}
-						objectFit="contain"
-					/>
-				</Circle1> */}
-			</WatermarkContainer>
 			<Container>
 				<XContainer>
 					<Image
@@ -86,7 +64,7 @@ const EventSection = () => {
 				<IluContainer>
 					<figure>
 						<Image
-							src="/assets/ilu-conf.svg"
+							src="/assets/conference/ilustration.svg"
 							alt="conf ilu"
 							objectFit="contain"
 							layout="responsive"
@@ -106,7 +84,7 @@ const EventSection = () => {
 					</figure>
 				</IluContainer>
 				<PlaceContainer>
-					<p>IN AMSTERDAM / NETHERLANDS</p>
+					<p>IN PARIS / FRANCE</p>
 					<div>
 						<figure>
 							<Image
@@ -118,7 +96,7 @@ const EventSection = () => {
 								height={30}
 							/>
 						</figure>
-						<span>WESTERUNIE Klönneplein 4-6, 1014 DD</span>
+						<span>Institute du monde arabe</span>
 					</div>
 				</PlaceContainer>
 				<Link href={"/#day-1"} passHref>
@@ -149,47 +127,6 @@ const EventSection = () => {
 
 export default EventSection
 
-const WatermarkContainer = styled.div`
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	/* bottom: 0; */
-	width: 100%;
-	/* min-height: 100vh; */
-	height: calc(100% + 10rem);
-	max-width: 200rem;
-	margin: 0 auto;
-	font-family: "Avenir Next";
-
-	/* border: 1px solid green; */
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		/* overflow: hidden; */
-		/* height: 100%; */
-	}
-`
-
-const Circle1 = styled(motion.figure)`
-	position: absolute;
-	z-index: -3;
-
-	width: 5rem;
-	heigth: 5rem;
-	left: 20%;
-	top: 10%;
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		width: 10rem;
-		heigth: 10rem;
-		right: 20%;
-		left: unset;
-		top: 0%;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			top: -5%;
-		}
-	}
-`
-
 const ArrowContainer = styled(motion.figure)`
 	cursor: pointer;
 	grid-area: a;
@@ -200,9 +137,6 @@ const ArrowContainer = styled(motion.figure)`
 
 	width: 6rem;
 	heigth: 6rem;
-	/* bottom: 5rem; */
-	/* left: 3rem; */
-	/* display: none; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		/* display: block; */

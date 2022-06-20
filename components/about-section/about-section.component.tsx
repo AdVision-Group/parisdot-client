@@ -11,12 +11,8 @@ import Button from "../button/button.component"
 const AboutSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	// const tr
-	// ansformOpacity = useTransform(scrollYProgress, [0.13, 0.2], [1, 0])
-
-	const transformYDO = useTransform(scrollYProgress, [0.54, 0.7], [-180, 0])
-
-	const transformYT = useTransform(scrollYProgress, [0.54, 0.77], [130, -40])
+	const transformYDO = useTransform(scrollYProgress, [0.54, 0.7], [0, 0])
+	const transformYT = useTransform(scrollYProgress, [0.54, 0.77], [0, 0])
 
 	const partners = [
 		{
@@ -219,11 +215,11 @@ const WatermarkLetters = styled(motion.h2)`
 	&.t {
 		display: none;
 		top: 20rem;
-		right: 0rem;
+		right: 2rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		font-size: 30rem;
+		font-size: 25rem;
 		&.do {
 			/* border: 1px solid green; */
 			/* display: block; */
@@ -247,7 +243,7 @@ const WatermarkLetters = styled(motion.h2)`
 
 		&.t {
 			top: 25rem;
-			right: 0rem;
+			/* right: 0rem; */
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			&.do {
@@ -264,10 +260,10 @@ const WatermarkLetters = styled(motion.h2)`
 			&.t {
 				display: block;
 				top: 25rem;
-				right: 0rem;
+				/* right: 0rem; */
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				font-size: 50rem;
+				/* font-size: 50rem; */
 			}
 		}
 	}

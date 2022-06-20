@@ -8,29 +8,15 @@ import Link from "next/link"
 import Button from "../button/button.component"
 
 // Hooks
-import { useToggle } from "react-use"
-import {
-	motion,
-	useViewportScroll,
-	useTransform,
-	// useSpring,
-} from "framer-motion"
+import { motion, useViewportScroll, useTransform } from "framer-motion"
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformPA = useTransform(
-		scrollYProgress,
-		[0, 0.14, 1, 1],
-		[0, 150, 150, 150]
-	)
-	const transformRIS = useTransform(
-		scrollYProgress,
-		[0, 0.14, 1, 1],
-		[20, -100, -100, -100]
-	)
+	const transformPA = useTransform(scrollYProgress, [0, 0.14], [0, 150])
+	const transformRIS = useTransform(scrollYProgress, [0, 0.14], [0, -100])
 
 	const partners = [
 		{
@@ -123,7 +109,7 @@ const HeroSection = () => {
 						// fontFamily: "Avenir Next",
 						// opacity: transformWatermarkOpacity,
 					}}
-					className="am"
+					className="pa"
 				>
 					<Image
 						src={"/assets/hero/pa.svg"}
@@ -140,7 +126,7 @@ const HeroSection = () => {
 
 						// opacity: transformWatermarkOpacity,
 					}}
-					className="st-horizontal"
+					className="ris"
 				>
 					<Image
 						src={"/assets/hero/ris.svg"}
@@ -290,115 +276,45 @@ const WatermarkContainer = styled.div`
 const WatermarkLetters = styled(motion.h2)`
 	position: absolute;
 	overflow: hidden;
-	font-size: 15rem;
 	z-index: -2;
 	color: ${({ theme }) => theme.fonts.primary};
 
-	font-weight: 400;
-
-	&.am {
-		/* border: 1px solid green; */
-		top: 8rem;
+	&.pa {
+		display: none;
+		width: 20rem;
+		top: -4rem;
 		left: -6rem;
 	}
-	&.st {
+	&.ris {
 		display: none;
 		width: 20rem;
 		top: 25rem;
 		right: 0rem;
 	}
-	&.st-horizontal {
-		width: 13rem;
-		top: 30rem;
-		right: -5rem;
-	}
-	&.er {
-		display: none;
-		/* width: 5rem; */
-		/* height: 40rem; */
-		/* overflow-wrap: break-word; */
-		top: 40rem;
-		left: 5rem;
-	}
-
-	&.er-horizontal {
-		/* width: 5rem; */
-		/* height: 40rem; */
-		/* border: 1px solid green; */
-		line-height: 1;
-		/* overflow-wrap: break-word; */
-		top: 40rem;
-		left: -2rem;
-		span {
-			display: block;
-		}
-	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		/* grid-template-columns: 1fr 35rem; */
-		/* background-color: red; */
-		font-size: 30rem;
+		&.pa {
+		}
+		&.ris {
+		}
 
-		&.am {
-			/* border: 1px solid green; */
-			top: 10rem;
-			left: -30rem;
-		}
-		&.st {
-			display: block;
-			width: 35.5rem;
-
-			top: 25rem;
-			right: -15rem;
-		}
-		&.st-horizontal {
-			display: none;
-		}
-		&.er {
-			display: block;
-			/* top: 38rem; */
-			bottom: -10rem;
-
-			left: 10rem;
-		}
-		&.er-horizontal {
-			display: none;
-		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			/* grid-template-columns: 1fr 35rem; */
-			/* background-color: red; */
-			/* font-size: 30rem; */
-
-			&.am {
-				top: 7rem;
-				left: -11rem;
-			}
-			&.st {
-				top: 21rem;
-				right: -6rem;
-			}
-			&.er {
+			&.pa {
 				display: block;
-				bottom: 0rem;
-				left: 30rem;
+				width: 30rem;
+				top: 0rem;
+				left: 0rem;
+			}
+			&.ris {
+				display: block;
+				top: 10rem;
+				width: 30rem;
 			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				font-size: 50rem;
-
-				&.am {
-					top: 8rem;
-					left: 0rem;
+				&.pa {
 				}
-				&.st {
-					width: 70rem;
-
-					top: 27rem;
-					right: 0rem;
-				}
-				&.er {
-					top: 60rem;
-					left: 40rem;
+				&.ris {
 				}
 			}
 		}
@@ -487,7 +403,7 @@ const ContentContainer = styled.div`
 	/* "p p"; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		grid-template-columns: auto 1fr 10rem;
+		grid-template-columns: auto 1fr auto 10rem;
 		grid-template-rows: auto auto;
 		grid-template-areas:
 			"h h i  d"
@@ -686,17 +602,28 @@ const ButtonsContainer = styled.div`
 	grid-area: b;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 1rem;
 	align-self: end;
 	align-items: center;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 	/* width: 100%; */
 	/* margin: 2rem 0; */
 
 	button {
 		font-weight: 500;
-		/* padding: 1rem 1rem 1rem; */
-		font-size: 1.7rem;
+		padding: 1rem 1rem 1rem;
+		font-size: 1.6rem;
+	}
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		justify-content: flex-start;
+		gap: 2rem;
+
+		button {
+			font-weight: 500;
+			padding: 1.2rem 2rem 1.2rem;
+			font-size: 1.7rem;
+		}
 	}
 `
 
