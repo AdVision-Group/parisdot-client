@@ -17,6 +17,7 @@ const HeroSection: React.FC = () => {
 
 	const transformPA = useTransform(scrollYProgress, [0, 1], [0, 85])
 	const transformRIS = useTransform(scrollYProgress, [0, 1], [0, -85])
+	const transformPARIS = useTransform(scrollYProgress, [0, 1], [0, -85])
 
 	const partners = [
 		{
@@ -105,7 +106,7 @@ const HeroSection: React.FC = () => {
 			<WatermarkContainer>
 				<WatermarkLetters
 					style={{
-						x: transformPA,
+						x: transformPARIS,
 						// fontFamily: "Avenir Next",
 						// opacity: transformWatermarkOpacity,
 					}}
@@ -303,8 +304,8 @@ const WatermarkLetters = styled(motion.h2)`
 		display: block;
 		width: 25rem;
 		top: 7rem;
-		left: 50%;
-		transform: translateX(-50%) !important;
+		right: 5rem;
+		/* transform: translateX(-50%) !important; */
 	}
 	&.pa {
 		display: none;
