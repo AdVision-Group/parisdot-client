@@ -107,6 +107,18 @@ const FooterSection = () => {
 							objectFit="contain"
 						/>
 					</figure>
+					<figure>
+						<Image
+							src={"/assets/dots.svg"}
+							alt="dots"
+							placeholder="blur"
+							blurDataURL="data:image/webp;base64,UklGRsQFAABXRUJQVlA4WAoAAAAgAAAAZQIAmQEASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCCGAwAA0EUAnQEqZgKaAT7tdrdWqaclI6AIATAdiWlu4Wa/MM6nnP9lHxIB8Y/QAnsA99snIe+2TkPfbmdgi8y/T2ych77ZTOC7exJ+jP1f381RFys3XhBdw2c/2E1nqImLYayJ4T34Xm1OUQLOf3f199ChhMDtQD5228zNAzh8QYGg0elptD8iIamJLCd1EzNA5omzGbOHaFyuzpToNSmL2Sm9Dya4Pl3Yb0FGx/gNvKsZIj/f7cfbJyq8PhVqPzouI00mu00rd7wiRdYr38R8bs3lLNKF67rP0lvqEXLbXAgehex1q2zeoZr/NqB74pSBteLmMtS7rz3+/p63f2Lnh/hNN9s9sx8nH8GiFiyC5jqBKVj/IK3K7cCcsYRSyAxXxdOlR89RZ8KweL7YZxtaNzr5EVpWXEeUOrvPUVP3nuppBBRRUyLAzhPZqOUs1V/LxDrJwGQfbdPbN3K7ZnZO1Rud+CF1bxDrKhl6GfWpRKyXqfvCNnWZo56iq1CHWSoqPae2TpALQjOdxCItER5GH5XaycCm9F4uTkSGGfiVCXi/PFZt2Qr0lPnS59L1hwgu1RI+rDLfYpTkJTbYCq6paVoeLk5D34sdCV/AD/1FLrPFz/fAEA99snIe+2q2BuXOd/vvnVXU+JAsl2vFych77xEyn8RzJVO0bhvFych77ZOQ99sniVhIXj0eZqFp7ZOQ99snIe/xHiHOJehtwdRaVAsl2vFych77ZORax6GBLC+l2vFych77ZOFAAP733S9DhV23s7oY72jrjnTZKmXjzC3xdSu4TXHZLeBdvmQ5XAeFHqPfvHh+wn0bCfeDtusS3mKouidRvUcj1bI79KOp7ct9tjBhfCVU1ybPppImuByi9St7RE00HUiozi9RFoEuCu2S218NGWBJUIY38tVPaVLBBtzcpqzCBdxoCBpzvGtEYeN55eq8h78sAySs7jg8dN1QYWuY+Nnz544EsYCusbKKJRb2WOYZMVotOsJUDS+sde6HEFD0xVNKGTYqezCbzWC+eRFbpT3nN0/BHMo4ij2Bfsa20xphAsjNT0YwB8M6vSVnc8mQoFClY6+UD3pXdn2K/bm4jZCAuQUvhOJKtrzhyS6Gtx+mBD1e09NqNYtuGqSKRey8WR7UQVAHDzeJb5P448CEvflq7yNvJehAlFk7LfiAhSPzbtoASJgkiNWFAAAyYgAAAAA="
+							layout="responsive"
+							width={100}
+							height={40}
+							objectFit="contain"
+						/>
+					</figure>
 				</ImageContainer>
 				<ImageContainer className="third">
 					<figure>
@@ -151,9 +163,10 @@ const EventSectionContainer = styled.section`
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	margin-top: 10rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		/* margin-top: 10rem; */
+		margin-top: 20rem;
 		/* height: 100vh; */
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		}
@@ -285,6 +298,14 @@ const ImageContainer = styled(motion.div)`
 
 				right: -5rem;
 			}
+			&:nth-of-type(3) {
+				display: none;
+				top: unset;
+				bottom: 0rem;
+				width: 21rem;
+				z-index: 99;
+				/* right: -5rem; */
+			}
 		}
 	}
 
@@ -356,6 +377,14 @@ const ImageContainer = styled(motion.div)`
 						bottom: -15rem;
 					}
 					&:nth-of-type(2) {
+					}
+					&:nth-of-type(3) {
+						display: block;
+						top: unset;
+						bottom: -20rem;
+						width: 21rem;
+						z-index: 99;
+						/* right: -5rem; */
 					}
 				}
 			}
