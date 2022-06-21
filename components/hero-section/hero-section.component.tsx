@@ -139,7 +139,7 @@ const HeroSection: React.FC = () => {
 				</WatermarkLetters>
 			</WatermarkContainer>
 			<SectionContainer>
-				<Link href={"/#hackaton-content"} passHref>
+				<Link href={"/#about"} passHref>
 					<a>
 						<ArrowContainer
 						// animate={{
@@ -211,7 +211,7 @@ const HeroSection: React.FC = () => {
 							</Link>
 						</ButtonsContainer>
 						<PlaceContainer>
-							<p>IN PARIS / FRANCE</p>
+							<p>IN PARIS </p>
 						</PlaceContainer>
 					</ContentContainer>
 					<PartnersContainer>
@@ -311,7 +311,7 @@ const WatermarkLetters = styled(motion.h2)`
 			&.ris {
 				display: block;
 				top: 10rem;
-				width: 30rem;
+				width: 35rem;
 			}
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
@@ -428,7 +428,7 @@ const HeadContainer = styled.div`
 		display: inline-block;
 		font-family: "Avenir Next";
 		line-height: 1.2;
-		font-weight: 600;
+		font-weight: 400;
 		padding-bottom: 1rem;
 		/* padding-right: 4rem; */
 		span {
@@ -526,7 +526,7 @@ const DateContainer = styled.div`
 	max-width: 10rem;
 	/* border: 1px solid green; */
 	justify-self: end;
-	font-size: 3rem;
+	font-size: 2.5rem;
 	line-height: 1.1;
 	text-align: center;
 	margin-top: 0.7rem;
@@ -639,8 +639,8 @@ const PlaceContainer = styled.div`
 	text-align: right;
 
 	p {
-		font-family: "Acumin Variable Concept";
-		/* font-weight: 300; */
+		/* font-family: "Acumin Variable Concept"; */
+		font-weight: 400;
 		line-height: 1;
 		font-size: 1.5rem;
 		margin-bottom: -0.3rem;
@@ -665,12 +665,12 @@ const PlaceContainer = styled.div`
 			/* justify-self: end; */
 
 			p {
-				font-size: 1.8rem;
+				/* font-size: 1.8rem; */
 			}
 			/* margin-right: -12rem; */
 
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				font-size: 2.5rem;
+				/* font-size: 2.5rem; */
 			}
 		}
 	}

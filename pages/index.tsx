@@ -184,7 +184,7 @@ const Home: NextPage = () => {
 
 			<Footer>
 				<a
-					href="https://github.com/AdVision-Group/amsterdot-client"
+					href="https://github.com/AdVision-Group/parisdot-client"
 					rel="noopener noreferrer"
 					target="_blank"
 				>

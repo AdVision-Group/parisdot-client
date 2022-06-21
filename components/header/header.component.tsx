@@ -131,7 +131,7 @@ const Header: React.FC<IProps> = ({
 						</a> */}
 						{/* </Link> */}
 						<a
-							href="https://twitter.com/amsterdot_conf"
+							href="https://twitter.com/Paris_Dot_Comm"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
@@ -147,7 +147,7 @@ const Header: React.FC<IProps> = ({
 							</motion.figure>
 						</a>
 						<a
-							href="https://discord.gg/Vg2ex2Y93f"
+							href="https://discord.gg/uKf968bd"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
