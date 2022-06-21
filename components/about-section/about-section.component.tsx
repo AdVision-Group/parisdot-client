@@ -195,10 +195,11 @@ const WatermarkLetters = styled(motion.h2)`
 	font-weight: 400;
 
 	&.do {
+		font-size: 12rem;
 		/* border: 1px solid green; */
 		/* display: none; */
-		top: -10rem;
-		left: 0rem;
+		top: -8rem;
+		left: 4rem;
 	}
 
 	&.do-horizontal {
@@ -222,6 +223,7 @@ const WatermarkLetters = styled(motion.h2)`
 		font-size: 25rem;
 		&.do {
 			/* border: 1px solid green; */
+			font-size: 25rem;
 			/* display: block; */
 			top: 5rem;
 			left: 0rem;
@@ -277,7 +279,8 @@ const SectionContainer = styled.section`
 	z-index: 99;
 	/* height: 100vh; */
 	/* overflow: hidden; */
-	margin: 15rem 0 10rem;
+	max-width: 145rem;
+	margin: 15rem auto 10rem;
 	overflow: unset !important;
 	overflow-x: hidden;
 	display: flex;
@@ -287,13 +290,13 @@ const SectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 20rem 0 10rem;
+		margin: 20rem auto 10rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 12rem 0 10rem;
+			margin: 12rem auto 10rem;
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;
-			}
+			} */
 		}
 	}
 `
@@ -308,9 +311,9 @@ const Container = styled(motion.div)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0rem 1.5rem 0;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
-		}
+		} */
 	}
 `
 
@@ -371,7 +374,7 @@ const ContentContainer = styled.div`
 				margin-bottom: 2rem;
 			}
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				padding: 4rem 7rem 5rem;
 
 				h2 {
@@ -383,7 +386,7 @@ const ContentContainer = styled.div`
 				p {
 					margin-bottom: 2rem;
 				}
-			}
+			} */
 		}
 	}
 `
@@ -482,12 +485,12 @@ const ButtonsContainer = styled.div`
 				padding: 1.2rem 2rem 0.8rem;
 				font-weight: 400;
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
 					font-size: 3rem;
 					padding: 1.8rem 4rem 1.5rem;
 				}
-			}
+			} */
 		}
 	}
 `

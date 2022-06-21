@@ -214,16 +214,16 @@ const Title = styled(motion.h3)`
 
 	&.see {
 		grid-area: s;
-		padding-left: 2.5rem;
+		/* padding-left: 2.5rem; */
 	}
 	&.you {
 		grid-area: u;
 		align-self: end;
-		padding-right: 2.5rem;
+		/* padding-right: 2.5rem; */
 	}
 	&.there {
 		grid-area: t;
-		padding-left: 2.5rem;
+		/* padding-left: 2.5rem; */
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		font-size: 10rem;

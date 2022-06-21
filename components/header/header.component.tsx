@@ -47,7 +47,7 @@ const Header: React.FC<IProps> = ({
 			// Client-side-only code
 			window.onscroll = () => {
 				let currentScrollPos = window.pageYOffset
-				if (currentScrollPos > 80) {
+				if (currentScrollPos > 10) {
 					toggleIsOnTop(false)
 				} else {
 					if (currentScrollPos <= 0) return
@@ -539,7 +539,7 @@ const Socials = styled.div`
 		border: 3px solid ${({ theme }) => theme.color.primary};
 		border-radius: 50%;
 		padding: 1.5rem;
-		font-size: 1.6rem;
+		font-size: 2.4rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
