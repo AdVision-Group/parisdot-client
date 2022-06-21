@@ -109,29 +109,23 @@ const Home: NextPage = () => {
 
 				{/* <!-- Open Graph / Facebook --> */}
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content="https://amsterdot.io/" />
+				<meta property="og:url" content="https://parisdot.comm/" />
 				<meta property="og:title" content="parisDOT Conf Hack" />
 				<meta
 					property="og:description"
 					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
-				<meta
-					property="og:image"
-					content="https://res.cloudinary.com/coderkin/image/upload/v1648731047/amsterDOT/meta-v2_oq32v3.png"
-				/>
+				<meta property="og:image" content="/assets/meta.png" />
 
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content="https://amsterdot.io/" />
+				<meta property="twitter:url" content="https://parisdot.comm/" />
 				<meta property="twitter:title" content="parisDOT Conf Hack" />
 				<meta
 					property="twitter:description"
 					content="4 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 4/20-23 in Amsterdam, the Netherlands."
 				/>
-				<meta
-					property="twitter:image"
-					content="https://res.cloudinary.com/coderkin/image/upload/v1648731047/amsterDOT/meta-v2_oq32v3.png"
-				/>
+				<meta property="twitter:image" content="/assets/meta.png" />
 			</Head>
 
 			<Header
