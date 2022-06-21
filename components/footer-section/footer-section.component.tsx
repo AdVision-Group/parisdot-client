@@ -133,7 +133,7 @@ const EventSectionContainer = styled.section`
 	color: ${({ theme }) => theme.fonts.primary};
 	width: 100%;
 	max-width: 110rem;
-	margin: 0 auto;
+	margin: 20rem auto 0;
 	min-height: 100vh;
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
