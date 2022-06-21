@@ -364,7 +364,7 @@ const ArrowContainer = styled(motion.figure)`
 	heigth: 6rem;
 	bottom: -8rem;
 	right: 3rem;
-	/* display: none; */
+	display: none;
 
 	@media all and (max-height: 650px) {
 		display: none;
@@ -373,11 +373,11 @@ const ArrowContainer = styled(motion.figure)`
 		right: unset;
 		left: 3rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			display: block;
 			width: 8rem;
 			heigth: 8rem;
 			bottom: 0rem;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				display: block;
 				bottom: 13rem;
 			}
 		}
