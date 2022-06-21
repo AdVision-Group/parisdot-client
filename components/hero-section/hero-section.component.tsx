@@ -15,9 +15,9 @@ const HeroSection: React.FC = () => {
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformPA = useTransform(scrollYProgress, [0, 1], [0, 85])
-	const transformRIS = useTransform(scrollYProgress, [0, 1], [0, -85])
-	const transformPARIS = useTransform(scrollYProgress, [0, 1], [0, -85])
+	const transformPA = useTransform(scrollYProgress, [0, 1.5], [0, 85])
+	const transformRIS = useTransform(scrollYProgress, [0, 1.5], [0, -85])
+	const transformPARIS = useTransform(scrollYProgress, [0, 1.5], [0, -85])
 
 	const partners = [
 		{
@@ -304,7 +304,7 @@ const WatermarkLetters = styled(motion.h2)`
 		display: block;
 		width: 25rem;
 		top: 7rem;
-		right: 5rem;
+		right: 18%;
 		/* transform: translateX(-50%) !important; */
 	}
 	&.pa {

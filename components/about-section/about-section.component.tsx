@@ -11,8 +11,8 @@ import Button from "../button/button.component"
 const AboutSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformYDO = useTransform(scrollYProgress, [0, 1], [-85, 0])
-	const transformYT = useTransform(scrollYProgress, [0, 1], [0, -85])
+	const transformYDO = useTransform(scrollYProgress, [0, 0.7], [0, 50])
+	const transformYT = useTransform(scrollYProgress, [0, 0.7], [0, -85])
 
 	const partners = [
 		{
@@ -221,7 +221,7 @@ const WatermarkLetters = styled(motion.h2)`
 		/* border: 1px solid green; */
 		/* display: none; */
 		top: -8rem;
-		left: 4rem;
+		left: -3rem;
 		figure {
 			margin-top: 4rem;
 			width: 9rem;
@@ -265,8 +265,8 @@ const WatermarkLetters = styled(motion.h2)`
 				top: 5rem;
 				left: 0rem;
 
-				span {
-					/* display: none; */
+				figure {
+					display: none;
 				}
 			}
 
