@@ -648,8 +648,8 @@ const PlaceContainer = styled.div`
 
 	position: absolute;
 	transform: rotate(-90deg);
-	right: -10rem;
-	bottom: 21rem;
+	right: -1rem;
+	bottom: 16rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;
