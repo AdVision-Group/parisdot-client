@@ -11,8 +11,8 @@ import Button from "../button/button.component"
 const AboutSection = () => {
 	const { scrollYProgress } = useViewportScroll()
 
-	const transformYDO = useTransform(scrollYProgress, [0.54, 0.7], [0, 0])
-	const transformYT = useTransform(scrollYProgress, [0.54, 0.77], [0, 0])
+	const transformYDO = useTransform(scrollYProgress, [0, 1], [0, 85])
+	const transformYT = useTransform(scrollYProgress, [0, 1], [0, -85])
 
 	const partners = [
 		{
@@ -196,7 +196,7 @@ const WatermarkLetters = styled(motion.h2)`
 
 	&.do {
 		/* border: 1px solid green; */
-		/* display: none; */
+		display: none;
 		top: -10rem;
 		left: 0rem;
 	}
@@ -217,53 +217,57 @@ const WatermarkLetters = styled(motion.h2)`
 		top: 20rem;
 		right: 5rem;
 	}
-
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		font-size: 25rem;
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		&.do {
-			/* border: 1px solid green; */
-			/* display: block; */
-			top: 5rem;
-			left: 0rem;
-
-			span {
-				/* display: none; */
-			}
+			display: block;
 		}
-
-		&.do-horizontal {
-			top: 5rem;
-			left: 0rem;
-			line-height: 1;
-
-			span {
-				display: block;
-			}
-		}
-
-		&.t {
-			top: 25rem;
-			/* right: 0rem; */
-		}
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: 25rem;
 			&.do {
 				/* border: 1px solid green; */
-				/* display: block; */
+				display: block;
 				top: 5rem;
 				left: 0rem;
 
 				span {
-					display: none;
+					/* display: none; */
+				}
+			}
+
+			&.do-horizontal {
+				top: 5rem;
+				left: 0rem;
+				line-height: 1;
+
+				span {
+					display: block;
 				}
 			}
 
 			&.t {
-				display: block;
 				top: 25rem;
 				/* right: 0rem; */
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				/* font-size: 50rem; */
+			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+				&.do {
+					/* border: 1px solid green; */
+					/* display: block; */
+					top: 5rem;
+					left: 0rem;
+
+					span {
+						display: none;
+					}
+				}
+
+				&.t {
+					display: block;
+					top: 25rem;
+					/* right: 0rem; */
+				}
+				@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+					/* font-size: 50rem; */
+				}
 			}
 		}
 	}

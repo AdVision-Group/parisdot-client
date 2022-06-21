@@ -15,9 +15,9 @@ const FooterSection = () => {
 	// 	[1, 1, 1, 1]
 	// )
 
-	const transformSEE = useTransform(scrollYProgress, [0.83, 1], [0, 0])
-	const transformYOU = useTransform(scrollYProgress, [0.83, 1], [0, 0])
-	const transformTHERE = useTransform(scrollYProgress, [0.83, 1], [0, 0])
+	const transformSEE = useTransform(scrollYProgress, [0, 1], [0, 85])
+	const transformYOU = useTransform(scrollYProgress, [0, 1], [0, -85])
+	const transformTHERE = useTransform(scrollYProgress, [0, 1], [0, 85])
 
 	return (
 		<EventSectionContainer>

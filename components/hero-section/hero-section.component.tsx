@@ -15,8 +15,8 @@ const HeroSection: React.FC = () => {
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformPA = useTransform(scrollYProgress, [0, 0.14], [0, 0])
-	const transformRIS = useTransform(scrollYProgress, [0, 0.14], [0, 0])
+	const transformPA = useTransform(scrollYProgress, [0, 1], [0, 85])
+	const transformRIS = useTransform(scrollYProgress, [0, 1], [0, -85])
 
 	const partners = [
 		{
