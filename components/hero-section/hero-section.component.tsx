@@ -381,6 +381,8 @@ const ArrowContainer = styled(motion.figure)`
 			display: block;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				bottom: 13rem;
+				right: unset;
+				left: 3rem;
 			}
 		}
 	}
