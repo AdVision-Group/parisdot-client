@@ -303,7 +303,8 @@ const WatermarkLetters = styled(motion.h2)`
 		display: block;
 		width: 25rem;
 		top: 7rem;
-		left: 6rem;
+		left: 50%;
+		transform: translateX(-50%) !important;
 	}
 	&.pa {
 		display: none;
@@ -322,6 +323,11 @@ const WatermarkLetters = styled(motion.h2)`
 		&.pa {
 		}
 		&.ris {
+		}
+		&.paris {
+			/* display: none; */
+			top: 10rem;
+			width: 35rem;
 		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -511,7 +517,7 @@ const ImageContainer = styled.figure`
 	width: 100%;
 	justify-content: center;
 	/* margin-left: -2rem; */
-	margin-top: 4rem;
+	margin-top: 3rem;
 	margin-bottom: 4rem;
 	figure {
 		position: relative;
@@ -674,7 +680,7 @@ const PlaceContainer = styled.div`
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -1rem;
-	bottom: 16rem;
+	bottom: 19rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;

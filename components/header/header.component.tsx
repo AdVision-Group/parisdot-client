@@ -413,15 +413,9 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 			padding: 0;
 
 			button {
-				/* font-size: 3rem; */
-				padding: 1.2rem 2rem 0.8rem;
-				font-weight: 400;
-			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				button {
-					font-size: 3rem;
-					padding: 1.8rem 4rem 1.5rem;
-				}
+				font-weight: 500;
+				padding: 1.2rem 2rem 1.2rem;
+				font-size: 1.7rem;
 			}
 		}
 	}

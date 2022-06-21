@@ -469,7 +469,7 @@ const ButtonsContainer = styled.div`
 		font-family: "Avenir Next";
 		font-size: 1.5rem;
 		font-weight: 700;
-		padding: 1rem 1rem 0.8rem;
+		padding: 1rem 1rem 1rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -479,11 +479,10 @@ const ButtonsContainer = styled.div`
 		flex-wrap: unset;
 		gap: 2rem;
 
-		button {
+		/* button {
 			font-size: 2rem;
 			line-height: 1;
-			/* margin-bottom: 1rem; */
-		}
+		} */
 		button:nth-of-type(1) {
 			/* font-size: 2rem; */
 			/* margin-right: 1rem; */
@@ -491,9 +490,9 @@ const ButtonsContainer = styled.div`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
-				/* font-size: 3rem; */
-				padding: 1.2rem 2rem 0.8rem;
-				font-weight: 400;
+				font-weight: 500;
+				padding: 1.2rem 2rem 1.2rem;
+				font-size: 1.7rem;
 			}
 			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
