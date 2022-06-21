@@ -17,7 +17,7 @@ import { FaTwitter, FaDiscord } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 
 // Data
-import { events, hackatons } from "../../utils/data"
+// import { events, hackatons } from "../../utils/data"
 
 interface IProps {
 	openEventDayProgram: (

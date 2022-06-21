@@ -243,6 +243,9 @@ const HeroSection: React.FC = () => {
 								</motion.figure>
 							</a>
 						))}
+						<PartnersOverlay>
+							<p>SPONSORS TBA</p>
+						</PartnersOverlay>
 					</PartnersContainer>
 				</Container>
 			</SectionContainer>
@@ -696,6 +699,7 @@ const PartnersContainer = styled.div`
 		max-width: 15rem;
 		/* height: 3rem; */
 		position: relative;
+		filter: blur(0.5rem);
 	}
 	/* max-width: 30rem;
 	width: 100%;
@@ -706,4 +710,32 @@ const PartnersContainer = styled.div`
 			max-width: 50rem;
 		}
 	} */
+	&:after {
+		content: " ";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		filter: blur(0.5rem);
+	}
+`
+
+const PartnersOverlay = styled.div`
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		font-size: 2.5rem;
+	}
 `
