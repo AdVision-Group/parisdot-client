@@ -109,6 +109,23 @@ const HeroSection: React.FC = () => {
 						// fontFamily: "Avenir Next",
 						// opacity: transformWatermarkOpacity,
 					}}
+					className="paris"
+				>
+					<Image
+						src={"/assets/hero/paris.svg"}
+						alt="paris letters"
+						width={200}
+						height={100}
+						layout="responsive"
+						objectFit="contain"
+					/>
+				</WatermarkLetters>
+				<WatermarkLetters
+					style={{
+						x: transformPA,
+						// fontFamily: "Avenir Next",
+						// opacity: transformWatermarkOpacity,
+					}}
 					className="pa"
 				>
 					<Image
@@ -265,7 +282,7 @@ const WatermarkContainer = styled.div`
 	/* min-height: 100vh; */
 	height: calc(100% + 20rem);
 	overflow: hidden;
-	max-width: 200rem;
+	max-width: 145rem;
 	margin: 0 auto;
 	font-family: "Avenir Next";
 	z-index: 1;
@@ -282,6 +299,13 @@ const WatermarkLetters = styled(motion.h2)`
 	z-index: -2;
 	color: ${({ theme }) => theme.fonts.primary};
 
+	&.paris {
+		display: block;
+		width: 25rem;
+		top: 7rem;
+		left: 50%;
+		transform: translateX(-50%) !important;
+	}
 	&.pa {
 		display: none;
 		width: 20rem;
@@ -300,8 +324,16 @@ const WatermarkLetters = styled(motion.h2)`
 		}
 		&.ris {
 		}
+		&.paris {
+			/* display: none; */
+			top: 10rem;
+			width: 35rem;
+		}
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+			&.paris {
+				display: none;
+			}
 			&.pa {
 				display: block;
 				width: 30rem;
@@ -314,12 +346,12 @@ const WatermarkLetters = styled(motion.h2)`
 				width: 35rem;
 			}
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				&.pa {
 				}
 				&.ris {
 				}
-			}
+			} */
 		}
 	}
 `
@@ -332,7 +364,7 @@ const ArrowContainer = styled(motion.figure)`
 	heigth: 6rem;
 	bottom: -8rem;
 	right: 3rem;
-	/* display: none; */
+	display: none;
 
 	@media all and (max-height: 650px) {
 		display: none;
@@ -341,10 +373,12 @@ const ArrowContainer = styled(motion.figure)`
 		right: unset;
 		left: 3rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			display: block;
 			width: 8rem;
-			heigth: 8rem;
-			bottom: 0rem;
+			height: 8rem;
+			left: unset;
+			right: 3rem;
+			bottom: -12rem;
+			display: block;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				bottom: 13rem;
 			}
@@ -357,8 +391,9 @@ const SectionContainer = styled.section`
 	z-index: 99;
 	flex: none;
 	width: 100%;
+	max-width: 145rem;
 	/* height: 100vh; */
-	margin: 10rem 0;
+	margin: 10rem auto;
 	overflow: unset !important;
 	overflow-x: hidden;
 
@@ -367,9 +402,9 @@ const SectionContainer = styled.section`
 
 	color: ${({ theme }) => theme.fonts.primary};
 
-	@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+	/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 		align-items: center;
-	}
+	} */
 `
 
 const Container = styled(motion.div)`
@@ -383,9 +418,9 @@ const Container = styled(motion.div)`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			margin: 4rem 1.5rem 0;
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				max-width: 130rem;
-			}
+			} */
 		}
 	}
 `
@@ -415,9 +450,9 @@ const ContentContainer = styled.div`
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			padding: 3rem;
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				min-height: 65rem;
-			}
+			} */
 		}
 	}
 `
@@ -433,7 +468,7 @@ const HeadContainer = styled.div`
 		/* padding-right: 4rem; */
 		span {
 			display: block;
-			font-size: 4.5rem;
+			font-size: 5.7rem;
 		}
 	}
 
@@ -465,13 +500,13 @@ const HeadContainer = styled.div`
 			margin-bottom: unset;
 		}
 
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			h1 {
 				span {
 					font-size: 15rem;
 				}
 			}
-		}
+		} */
 	}
 `
 
@@ -484,8 +519,8 @@ const ImageContainer = styled.figure`
 	width: 100%;
 	justify-content: center;
 	/* margin-left: -2rem; */
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 4rem;
 	figure {
 		position: relative;
 		width: 17rem;
@@ -505,15 +540,13 @@ const ImageContainer = styled.figure`
 			/* border: 1px solid green; */
 		}
 		/* width: 25rem; */
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			figure {
 				width: 35rem;
-				/* height: 60rem; */
 				margin-bottom: 4rem;
 				margin-right: 10rem;
-				/* border: 1px solid green; */
 			}
-		}
+		} */
 	}
 `
 
@@ -649,7 +682,7 @@ const PlaceContainer = styled.div`
 	position: absolute;
 	transform: rotate(-90deg);
 	right: -1rem;
-	bottom: 16rem;
+	bottom: 19rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		position: relative;

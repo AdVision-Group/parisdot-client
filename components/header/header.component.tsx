@@ -47,7 +47,7 @@ const Header: React.FC<IProps> = ({
 			// Client-side-only code
 			window.onscroll = () => {
 				let currentScrollPos = window.pageYOffset
-				if (currentScrollPos > 80) {
+				if (currentScrollPos > 10) {
 					toggleIsOnTop(false)
 				} else {
 					if (currentScrollPos <= 0) return
@@ -413,15 +413,9 @@ const ButtonsContainer = styled(motion.div)<{ justifyContent?: string }>`
 			padding: 0;
 
 			button {
-				/* font-size: 3rem; */
-				padding: 1.2rem 2rem 0.8rem;
-				font-weight: 400;
-			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-				button {
-					font-size: 3rem;
-					padding: 1.8rem 4rem 1.5rem;
-				}
+				font-weight: 500;
+				padding: 1.2rem 2rem 1.2rem;
+				font-size: 1.7rem;
 			}
 		}
 	}
@@ -539,7 +533,7 @@ const Socials = styled.div`
 		border: 3px solid ${({ theme }) => theme.color.primary};
 		border-radius: 50%;
 		padding: 1.5rem;
-		font-size: 1.6rem;
+		font-size: 2.4rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {

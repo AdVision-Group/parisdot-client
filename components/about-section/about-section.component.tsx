@@ -63,7 +63,19 @@ const AboutSection = () => {
 						}}
 						className="do"
 					>
-						DO<span>T</span>
+						DO{" "}
+						<figure>
+							<Image
+								src={"/assets/about/t.svg"}
+								alt="dots"
+								placeholder="blur"
+								blurDataURL="data:image/webp;base64,UklGRsQFAABXRUJQVlA4WAoAAAAgAAAAZQIAmQEASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCCGAwAA0EUAnQEqZgKaAT7tdrdWqaclI6AIATAdiWlu4Wa/MM6nnP9lHxIB8Y/QAnsA99snIe+2TkPfbmdgi8y/T2ych77ZTOC7exJ+jP1f381RFys3XhBdw2c/2E1nqImLYayJ4T34Xm1OUQLOf3f199ChhMDtQD5228zNAzh8QYGg0elptD8iIamJLCd1EzNA5omzGbOHaFyuzpToNSmL2Sm9Dya4Pl3Yb0FGx/gNvKsZIj/f7cfbJyq8PhVqPzouI00mu00rd7wiRdYr38R8bs3lLNKF67rP0lvqEXLbXAgehex1q2zeoZr/NqB74pSBteLmMtS7rz3+/p63f2Lnh/hNN9s9sx8nH8GiFiyC5jqBKVj/IK3K7cCcsYRSyAxXxdOlR89RZ8KweL7YZxtaNzr5EVpWXEeUOrvPUVP3nuppBBRRUyLAzhPZqOUs1V/LxDrJwGQfbdPbN3K7ZnZO1Rud+CF1bxDrKhl6GfWpRKyXqfvCNnWZo56iq1CHWSoqPae2TpALQjOdxCItER5GH5XaycCm9F4uTkSGGfiVCXi/PFZt2Qr0lPnS59L1hwgu1RI+rDLfYpTkJTbYCq6paVoeLk5D34sdCV/AD/1FLrPFz/fAEA99snIe+2q2BuXOd/vvnVXU+JAsl2vFych77xEyn8RzJVO0bhvFych77ZOQ99sniVhIXj0eZqFp7ZOQ99snIe/xHiHOJehtwdRaVAsl2vFych77ZORax6GBLC+l2vFych77ZOFAAP733S9DhV23s7oY72jrjnTZKmXjzC3xdSu4TXHZLeBdvmQ5XAeFHqPfvHh+wn0bCfeDtusS3mKouidRvUcj1bI79KOp7ct9tjBhfCVU1ybPppImuByi9St7RE00HUiozi9RFoEuCu2S218NGWBJUIY38tVPaVLBBtzcpqzCBdxoCBpzvGtEYeN55eq8h78sAySs7jg8dN1QYWuY+Nnz544EsYCusbKKJRb2WOYZMVotOsJUDS+sde6HEFD0xVNKGTYqezCbzWC+eRFbpT3nN0/BHMo4ij2Bfsa20xphAsjNT0YwB8M6vSVnc8mQoFClY6+UD3pXdn2K/bm4jZCAuQUvhOJKtrzhyS6Gtx+mBD1e09NqNYtuGqSKRey8WR7UQVAHDzeJb5P448CEvflq7yNvJehAlFk7LfiAhSPzbtoASJgkiNWFAAAyYgAAAAA="
+								layout="responsive"
+								width={100}
+								height={100}
+								objectFit="contain"
+							/>
+						</figure>
 					</WatermarkLetters>
 					<WatermarkLetters
 						style={{
@@ -81,7 +93,16 @@ const AboutSection = () => {
 						}}
 						className="t"
 					>
-						T
+						<Image
+							src={"/assets/about/t.svg"}
+							alt="dots"
+							placeholder="blur"
+							blurDataURL="data:image/webp;base64,UklGRsQFAABXRUJQVlA4WAoAAAAgAAAAZQIAmQEASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOCCGAwAA0EUAnQEqZgKaAT7tdrdWqaclI6AIATAdiWlu4Wa/MM6nnP9lHxIB8Y/QAnsA99snIe+2TkPfbmdgi8y/T2ych77ZTOC7exJ+jP1f381RFys3XhBdw2c/2E1nqImLYayJ4T34Xm1OUQLOf3f199ChhMDtQD5228zNAzh8QYGg0elptD8iIamJLCd1EzNA5omzGbOHaFyuzpToNSmL2Sm9Dya4Pl3Yb0FGx/gNvKsZIj/f7cfbJyq8PhVqPzouI00mu00rd7wiRdYr38R8bs3lLNKF67rP0lvqEXLbXAgehex1q2zeoZr/NqB74pSBteLmMtS7rz3+/p63f2Lnh/hNN9s9sx8nH8GiFiyC5jqBKVj/IK3K7cCcsYRSyAxXxdOlR89RZ8KweL7YZxtaNzr5EVpWXEeUOrvPUVP3nuppBBRRUyLAzhPZqOUs1V/LxDrJwGQfbdPbN3K7ZnZO1Rud+CF1bxDrKhl6GfWpRKyXqfvCNnWZo56iq1CHWSoqPae2TpALQjOdxCItER5GH5XaycCm9F4uTkSGGfiVCXi/PFZt2Qr0lPnS59L1hwgu1RI+rDLfYpTkJTbYCq6paVoeLk5D34sdCV/AD/1FLrPFz/fAEA99snIe+2q2BuXOd/vvnVXU+JAsl2vFych77xEyn8RzJVO0bhvFych77ZOQ99sniVhIXj0eZqFp7ZOQ99snIe/xHiHOJehtwdRaVAsl2vFych77ZORax6GBLC+l2vFych77ZOFAAP733S9DhV23s7oY72jrjnTZKmXjzC3xdSu4TXHZLeBdvmQ5XAeFHqPfvHh+wn0bCfeDtusS3mKouidRvUcj1bI79KOp7ct9tjBhfCVU1ybPppImuByi9St7RE00HUiozi9RFoEuCu2S218NGWBJUIY38tVPaVLBBtzcpqzCBdxoCBpzvGtEYeN55eq8h78sAySs7jg8dN1QYWuY+Nnz544EsYCusbKKJRb2WOYZMVotOsJUDS+sde6HEFD0xVNKGTYqezCbzWC+eRFbpT3nN0/BHMo4ij2Bfsa20xphAsjNT0YwB8M6vSVnc8mQoFClY6+UD3pXdn2K/bm4jZCAuQUvhOJKtrzhyS6Gtx+mBD1e09NqNYtuGqSKRey8WR7UQVAHDzeJb5P448CEvflq7yNvJehAlFk7LfiAhSPzbtoASJgkiNWFAAAyYgAAAAA="
+							layout="responsive"
+							width={100}
+							height={100}
+							objectFit="contain"
+						/>
 					</WatermarkLetters>
 				</WatermarkContainer>
 				<Container
@@ -195,10 +216,16 @@ const WatermarkLetters = styled(motion.h2)`
 	font-weight: 400;
 
 	&.do {
+		display: flex;
+		font-size: 12rem;
 		/* border: 1px solid green; */
-		display: none;
-		top: -10rem;
-		left: 0rem;
+		/* display: none; */
+		top: -8rem;
+		left: 4rem;
+		figure {
+			margin-top: 4rem;
+			width: 9rem;
+		}
 	}
 
 	&.do-horizontal {
@@ -214,12 +241,21 @@ const WatermarkLetters = styled(motion.h2)`
 
 	&.t {
 		display: none;
-		top: 20rem;
+		width: 18rem;
+		top: 25rem;
 		right: 5rem;
 	}
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 		&.do {
-			display: block;
+			/* border: 1px solid green; */
+			font-size: 25rem;
+			/* display: block; */
+			top: 5rem;
+			left: 0rem;
+
+			span {
+				/* display: none; */
+			}
 		}
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			font-size: 25rem;
@@ -245,8 +281,9 @@ const WatermarkLetters = styled(motion.h2)`
 			}
 
 			&.t {
-				top: 25rem;
-				/* right: 0rem; */
+				display: block;
+				top: 30rem;
+				right: 4rem;
 			}
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 				&.do {
@@ -255,7 +292,7 @@ const WatermarkLetters = styled(motion.h2)`
 					top: 5rem;
 					left: 0rem;
 
-					span {
+					figure {
 						display: none;
 					}
 				}
@@ -281,7 +318,8 @@ const SectionContainer = styled.section`
 	z-index: 99;
 	/* height: 100vh; */
 	/* overflow: hidden; */
-	margin: 15rem 0 10rem;
+	max-width: 145rem;
+	margin: 15rem auto 10rem;
 	overflow: unset !important;
 	overflow-x: hidden;
 	display: flex;
@@ -291,13 +329,13 @@ const SectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin: 20rem 0 10rem;
+		margin: 20rem auto 10rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 12rem 0 10rem;
+			margin: 12rem auto 10rem;
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				align-items: center;
-			}
+			} */
 		}
 	}
 `
@@ -312,9 +350,9 @@ const Container = styled(motion.div)`
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		margin: 0rem 1.5rem 0;
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 			max-width: 130rem;
-		}
+		} */
 	}
 `
 
@@ -375,7 +413,7 @@ const ContentContainer = styled.div`
 				margin-bottom: 2rem;
 			}
 
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				padding: 4rem 7rem 5rem;
 
 				h2 {
@@ -387,7 +425,7 @@ const ContentContainer = styled.div`
 				p {
 					margin-bottom: 2rem;
 				}
-			}
+			} */
 		}
 	}
 `
@@ -460,7 +498,7 @@ const ButtonsContainer = styled.div`
 		font-family: "Avenir Next";
 		font-size: 1.5rem;
 		font-weight: 700;
-		padding: 1rem 1rem 0.8rem;
+		padding: 1rem 1rem 1rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -470,11 +508,10 @@ const ButtonsContainer = styled.div`
 		flex-wrap: unset;
 		gap: 2rem;
 
-		button {
+		/* button {
 			font-size: 2rem;
 			line-height: 1;
-			/* margin-bottom: 1rem; */
-		}
+		} */
 		button:nth-of-type(1) {
 			/* font-size: 2rem; */
 			/* margin-right: 1rem; */
@@ -482,16 +519,16 @@ const ButtonsContainer = styled.div`
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			button {
-				/* font-size: 3rem; */
-				padding: 1.2rem 2rem 0.8rem;
-				font-weight: 400;
+				font-weight: 500;
+				padding: 1.2rem 2rem 1.2rem;
+				font-size: 1.7rem;
 			}
-			@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				button {
 					font-size: 3rem;
 					padding: 1.8rem 4rem 1.5rem;
 				}
-			}
+			} */
 		}
 	}
 `
