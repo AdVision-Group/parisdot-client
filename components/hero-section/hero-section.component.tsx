@@ -217,16 +217,24 @@ const HeroSection: React.FC = () => {
 							</figure>
 						</ImageContainer>
 						<ButtonsContainer>
-							<Link href={"/#hackaton-content"} passHref>
-								<a>
-									<Button>BUY TICKETS</Button>
-								</a>
-							</Link>
-							<Link href={"/#bounties"} passHref>
-								<a>
-									<Button outline={"true"}>APPLY TO SPEAK</Button>
-								</a>
-							</Link>
+							{/* <Link href={"/#hackaton-content"} passHref> */}
+							<a
+								rel="noopener noreferrer"
+								target="_blank"
+								href="https://www.eventbrite.com/e/parisdotcomm-tickets-372008245677"
+							>
+								<Button>BUY TICKETS</Button>
+							</a>
+							{/* </Link> */}
+							{/* <Link href={"/#bounties"} passHref> */}
+							<a
+								rel="noopener noreferrer"
+								target="_blank"
+								href="https://xkmlgcptw4h.typeform.com/to/WgZTsjqB"
+							>
+								<Button outline={"true"}>APPLY TO SPEAK</Button>
+							</a>
+							{/* </Link> */}
 						</ButtonsContainer>
 						<PlaceContainer>
 							<p>IN PARIS </p>
