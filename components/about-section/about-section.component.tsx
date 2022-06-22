@@ -141,16 +141,24 @@ const AboutSection = () => {
 							Targeting the wider crypto community.
 						</p>
 						<ButtonsContainer>
-							<Link href={"/#day-1"}>
-								<a>
-									<Button>BUY TICKETS</Button>
-								</a>
-							</Link>
-							<Link href={"/#hack-2"}>
-								<a>
-									<Button outline={"true"}>APPLY TO SPEAK</Button>
-								</a>
-							</Link>
+							{/* <Link href={"/#day-1"}> */}
+							<a
+								rel="noopener noreferrer"
+								target="_blank"
+								href="https://www.eventbrite.com/e/parisdotcomm-tickets-372008245677"
+							>
+								<Button>BUY TICKETS</Button>
+							</a>
+							{/* </Link> */}
+							{/* <Link href={"/#hack-2"}> */}
+							<a
+								rel="noopener noreferrer"
+								target="_blank"
+								href="https://xkmlgcptw4h.typeform.com/to/WgZTsjqB"
+							>
+								<Button outline={"true"}>APPLY TO SPEAK</Button>
+							</a>
+							{/* </Link> */}
 						</ButtonsContainer>
 						{/* <ButtonsContainer>
 							<Button>CONF PROGRAMME</Button>

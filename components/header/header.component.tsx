@@ -107,15 +107,19 @@ const Header: React.FC<IProps> = ({
 							// }}
 							// justifyContent="center"
 							>
-								<Link href={"/#bounties"} passHref>
-									<a>
-										<Button>BUY TICKETS</Button>
-									</a>
-								</Link>
+								{/* <Link href={"/#bounties"} passHref> */}
 								<a
 									rel="noopener noreferrer"
 									target="_blank"
-									href="https://youtube.com/playlist?list=PLpyT58HowFcU-pM-Q9Ms9eq0mRSP950ky"
+									href="https://www.eventbrite.com/e/parisdotcomm-tickets-372008245677"
+								>
+									<Button>BUY TICKETS</Button>
+								</a>
+								{/* </Link> */}
+								<a
+									rel="noopener noreferrer"
+									target="_blank"
+									href="https://xkmlgcptw4h.typeform.com/to/WgZTsjqB"
 								>
 									<Button outline={"true"}>APPLY TO SPEAK</Button>
 								</a>
