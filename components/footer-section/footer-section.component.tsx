@@ -161,7 +161,7 @@ const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
-	padding: 0rem 1.5rem 15rem;
+	padding: 0rem 1.5rem 7rem;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
