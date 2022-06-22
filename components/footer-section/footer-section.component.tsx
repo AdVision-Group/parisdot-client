@@ -24,7 +24,7 @@ const FooterSection = () => {
 			<div
 				style={{
 					width: "100%",
-					height: "10rem",
+					height: "5rem",
 				}}
 			/>
 			<EventSectionContainer>
@@ -162,7 +162,7 @@ const FooterSection = () => {
 			<div
 				style={{
 					width: "100%",
-					height: "10rem",
+					height: "5rem",
 				}}
 			/>
 		</React.Fragment>
@@ -175,7 +175,7 @@ const EventSectionContainer = styled.section`
 	/* border: 1px solid yellow; */
 	position: relative;
 	color: ${({ theme }) => theme.fonts.primary};
-	padding: 0rem 1.5rem 0rem;
+	padding: 0rem 1.5rem 7rem;
 	width: 100vw;
 	display: flex;
 	justify-content: center;

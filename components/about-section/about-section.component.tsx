@@ -116,7 +116,7 @@ const AboutSection = () => {
 					<ContentContainer>
 						<h2>WHAT IS PARISDOT?</h2>
 						<p>
-							4 days of conf & hack sessions organized by some of the leading
+							3 days of conf & hack sessions organized by some of the leading
 							projects of the Polkadot and Kusama ecosystems.
 						</p>
 						<PartnersContainer>
@@ -327,7 +327,7 @@ const SectionContainer = styled.section`
 	/* height: 100vh; */
 	/* overflow: hidden; */
 	max-width: 145rem;
-	margin: 15rem auto 10rem;
+	margin: 15rem auto 5rem;
 	overflow: unset !important;
 	overflow-x: hidden;
 	display: flex;
