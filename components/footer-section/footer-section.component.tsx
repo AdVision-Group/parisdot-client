@@ -153,6 +153,10 @@ const FooterSection = () => {
 							/>
 						</figure>
 					</ImageContainer>
+					<PlaceContainer>
+						<p>PDotComm ASBL</p>
+						<p>10, Giällewee, L-9749 Clervaux</p>
+					</PlaceContainer>
 				</Container>
 			</EventSectionContainer>
 			<div
@@ -195,7 +199,8 @@ const Container = styled.div`
 		"s f"
 		"i u"
 		"d d"
-		"t t";
+		"t t"
+		"p p";
 
 	/* &:before {
 		content: "";
@@ -218,7 +223,8 @@ const Container = styled.div`
 			"i f"
 			"i u"
 			"d d"
-			"t t";
+			"t t"
+			"p p";
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			/* width: unset;
@@ -227,7 +233,8 @@ const Container = styled.div`
 			grid-template-areas:
 				"s f d"
 				"i u u"
-				"i t t";
+				"i t t"
+				"p p p";
 		}
 	}
 `
@@ -418,5 +425,18 @@ const ImageContainer = styled(motion.div)`
 				}
 			}
 		}
+	}
+`
+
+const PlaceContainer = styled(motion.div)`
+	grid-area: p;
+	/* text-align: end; */
+	justify-self: end;
+
+	p {
+		font-family: "Acumin Variable Concept";
+		font-weight: 400;
+		line-height: 1;
+		font-size: 1.5rem;
 	}
 `

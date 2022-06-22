@@ -237,7 +237,7 @@ const HeroSection: React.FC = () => {
 							{/* </Link> */}
 						</ButtonsContainer>
 						<PlaceContainer>
-							<p>IN PARIS </p>
+							<p>Arabic World Institute / PARIS </p>
 						</PlaceContainer>
 					</ContentContainer>
 					<PartnersContainer>
@@ -456,7 +456,7 @@ const ContentContainer = styled.div`
 		grid-template-rows: auto auto;
 		grid-template-areas:
 			"h h i d"
-			"b b i p";
+			"b b p p";
 		min-height: 45rem;
 		padding: 2rem;
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
@@ -677,30 +677,32 @@ const ButtonsContainer = styled.div`
 `
 
 const PlaceContainer = styled.div`
-	/* grid-area: p; */
+	grid-area: unset;
 	align-self: end;
 	justify-self: end;
 	text-align: right;
+	/* border: 1px solid red; */
 
 	p {
-		/* font-family: "Acumin Variable Concept"; */
+		font-family: "Acumin Variable Concept";
 		font-weight: 400;
 		line-height: 1;
 		font-size: 1.5rem;
-		margin-bottom: -0.3rem;
+		/* margin-bottom: -0.3rem; */
 	}
 
 	position: absolute;
 	transform: rotate(-90deg);
-	right: -1rem;
+	right: -8rem;
 	bottom: 19rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
+		grid-area: p;
 		position: relative;
 		transform: rotate(0deg);
 		right: unset;
 		bottom: unset;
-		margin-right: -1rem;
+		/* margin-right: -1rem; */
 
 		p {
 			font-size: 1.6rem;
