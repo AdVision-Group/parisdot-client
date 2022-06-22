@@ -81,7 +81,7 @@ const Header: React.FC<IProps> = ({
 									<Image
 										src={"/assets/header/parisdot_logo.svg"}
 										width={100}
-										height={50}
+										height={30}
 										alt={"parisDOT logo"}
 										objectFit="contain"
 										layout="responsive"
@@ -312,9 +312,9 @@ const Header: React.FC<IProps> = ({
 									</figure>
 									<a
 										style={{ textDecoration: "underline" }}
-										href="mailto:amsterdot@hydradx.io"
+										href="mailto:orga@parisdotcomm.org"
 									>
-										amsterdot@hydradx.io
+										orga@parisdotcomm.org
 									</a>
 								</EmailLi>
 							</Ul>
@@ -578,7 +578,7 @@ const Container = styled.div`
 	.logo {
 		margin-top: 1rem;
 		position: relative;
-		width: 10rem;
+		width: 13rem;
 	}
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -589,13 +589,7 @@ const Container = styled.div`
 		.logo {
 			margin-top: 1rem;
 			position: relative;
-			width: 14rem;
-		}
-
-		@media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
-			figure {
-				/* width: 12rem; */
-			}
+			width: 17rem;
 		}
 	}
 `
