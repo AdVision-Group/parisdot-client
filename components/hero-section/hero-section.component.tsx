@@ -237,7 +237,7 @@ const HeroSection: React.FC = () => {
 							{/* </Link> */}
 						</ButtonsContainer>
 						<PlaceContainer>
-							<p>Arabic World Institute / PARIS </p>
+							<p>Arab World Institute / PARIS </p>
 						</PlaceContainer>
 					</ContentContainer>
 					<PartnersContainer>
