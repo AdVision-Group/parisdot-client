@@ -11,7 +11,7 @@ import { useTransform, useViewportScroll, motion } from "framer-motion"
 
 const VenueSection: React.FC = () => {
 	const { scrollYProgress } = useViewportScroll()
-	const transformVe = useTransform(scrollYProgress, [0, 1], [0, 120])
+	const transformVe = useTransform(scrollYProgress, [0.4, 1], [0, 60])
 	const transformNUE = useTransform(scrollYProgress, [0, 1], [0, -85])
 
 	return (
@@ -107,8 +107,8 @@ const SectionContainer = styled.section`
 
 const ImageContainer = styled.figure`
 	position: absolute;
-	width: 30rem;
-	top: -10rem;
+	width: 20rem;
+	top: -5rem;
 	right: 1.5rem;
 	z-index: -1;
 
@@ -123,9 +123,9 @@ const ImageContainer = styled.figure`
 `
 const SquareContainer = styled.figure`
 	position: absolute;
-	width: 10rem;
-	bottom: 1.5rem;
-	left: -1.5rem;
+	width: 12rem;
+	bottom: 0rem;
+	left: -3rem;
 	z-index: -1;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
