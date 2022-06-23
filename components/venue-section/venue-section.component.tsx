@@ -6,7 +6,14 @@ import styled from "styled-components"
 import Button from "../button/button.component"
 import Image from "next/image"
 
+// Hooks
+import { useTransform, useViewportScroll, motion } from "framer-motion"
+
 const VenueSection: React.FC = () => {
+	const { scrollYProgress } = useViewportScroll()
+	const transformVe = useTransform(scrollYProgress, [0, 1], [0, 120])
+	const transformNUE = useTransform(scrollYProgress, [0, 1], [0, -85])
+
 	return (
 		<SectionContainer>
 			<ImageContainer>
@@ -20,7 +27,13 @@ const VenueSection: React.FC = () => {
 				/>
 			</ImageContainer>
 			<GridContainer>
-				<h2>VE</h2>
+				<Title
+					style={{
+						x: transformVe,
+					}}
+				>
+					VE
+				</Title>
 				<ContentContainer>
 					<h3>The Arab World Institute</h3>
 					<p>
@@ -32,13 +45,21 @@ const VenueSection: React.FC = () => {
 					</p>
 					<Button>VIEW IN MAPS</Button>
 				</ContentContainer>
-				<h2>NUE</h2>
+				<Title
+					style={{
+						x: transformNUE,
+					}}
+				>
+					NUE
+				</Title>
 			</GridContainer>
 		</SectionContainer>
 	)
 }
 
 export default VenueSection
+
+const Title = styled(motion.h2)``
 
 const SectionContainer = styled.section`
 	scroll-margin-top: 20rem;
@@ -99,13 +120,13 @@ const GridContainer = styled.div`
 		&:nth-child(1) {
 			margin-left: 6rem;
 			line-height: 1;
-			grid-column: 1 / 3;
+			grid-column: 1 / 2;
 		}
 		&:nth-child(3) {
 			line-height: 0.6;
 			grid-column: 2 / 3;
 			/* grid-row: 1 / 2; */
-			/* grid-row: 2 / 3; */
+			grid-row: 2 / 3;
 			justify-self: end;
 		}
 	}
