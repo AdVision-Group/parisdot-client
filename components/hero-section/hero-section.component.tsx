@@ -241,7 +241,7 @@ const HeroSection: React.FC = () => {
 						</PlaceContainer>
 					</ContentContainer>
 					<PartnersContainer>
-						{partners.map((partner, idx) => (
+						{/* {partners.map((partner, idx) => (
 							<a
 								key={idx}
 								href={partner.href}
@@ -268,7 +268,7 @@ const HeroSection: React.FC = () => {
 									/>
 								</motion.figure>
 							</a>
-						))}
+						))} */}
 						<PartnersOverlay>
 							<p>SPONSORS TBA</p>
 						</PartnersOverlay>
@@ -389,7 +389,7 @@ const ArrowContainer = styled(motion.figure)`
 			bottom: -12rem;
 			display: block;
 			@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-				bottom: 13rem;
+				bottom: 0rem;
 				right: unset;
 				left: 3rem;
 			}
@@ -421,14 +421,14 @@ const SectionContainer = styled.section`
 const Container = styled(motion.div)`
 	width: 100%;
 	/* margin: 25rem 1.5rem 0; */
-	margin: 6rem 3rem 0;
+	margin: 6rem 3rem 5rem;
 	max-width: 84rem;
 
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin: 13rem 3rem 0;
+		margin: 13rem 3rem 5rem;
 
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			margin: 4rem 1.5rem 0;
+			margin: 4rem 1.5rem 5rem;
 			/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
 				max-width: 130rem;
 			} */
@@ -780,6 +780,7 @@ const PartnersOverlay = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 5rem 0;
 
 	p {
 		font-size: 2.5rem;
