@@ -59,6 +59,16 @@ const VenueSection: React.FC = () => {
 					NUE
 				</Title>
 			</GridContainer>
+			<SquareContainer>
+				<Image
+					src="/assets/venue-section/square.svg"
+					alt="square"
+					objectFit="contain"
+					layout="responsive"
+					width={100}
+					height={100}
+				/>
+			</SquareContainer>
 		</SectionContainer>
 	)
 }
@@ -76,7 +86,7 @@ const SectionContainer = styled.section`
 	/* height: 100vh; */
 	/* overflow: hidden; */
 	max-width: 145rem;
-	margin: 15rem auto 5rem;
+	margin: 22rem auto 5rem;
 	overflow: unset !important;
 	overflow-x: hidden;
 	padding: 0rem 1.5rem;
@@ -98,7 +108,7 @@ const SectionContainer = styled.section`
 const ImageContainer = styled.figure`
 	position: absolute;
 	width: 30rem;
-	top: 1.5rem;
+	top: -10rem;
 	right: 1.5rem;
 	z-index: -1;
 
@@ -109,6 +119,17 @@ const ImageContainer = styled.figure`
 		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			right: 20%;
 		}
+	}
+`
+const SquareContainer = styled.figure`
+	position: absolute;
+	width: 10rem;
+	bottom: 1.5rem;
+	left: -1.5rem;
+	z-index: -1;
+
+	@media all and (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+		display: none;
 	}
 `
 
@@ -124,7 +145,7 @@ const GridContainer = styled.div`
 		font-weight: 400;
 
 		&:nth-child(1) {
-			margin-left: 6rem;
+			margin-left: 0rem;
 			line-height: 1;
 			grid-column: 1 / 2;
 		}
@@ -132,7 +153,7 @@ const GridContainer = styled.div`
 			line-height: 0.6;
 			grid-column: 2 / 3;
 			/* grid-row: 1 / 2; */
-			grid-row: 2 / 3;
+			grid-row: 4 / 5;
 			justify-self: end;
 		}
 	}
