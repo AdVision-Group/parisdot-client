@@ -43,7 +43,13 @@ const VenueSection: React.FC = () => {
 						exchange in Paris but also an interlocutor in the field of
 						mathematics and research.
 					</p>
-					<Button>VIEW IN MAPS</Button>
+					<a
+						rel="noopener noreferrer"
+						target="_blank"
+						href="https://goo.gl/maps/SdJsiFNCFe38ZAHM6"
+					>
+						<Button>VIEW IN MAPS</Button>
+					</a>
 				</ContentContainer>
 				<Title
 					style={{
@@ -171,6 +177,7 @@ const ContentContainer = styled.div`
 		font-size: 1.8rem;
 		font-weight: 600;
 		margin-bottom: 1rem;
+		text-transform: uppercase;
 	}
 
 	p {
@@ -196,7 +203,7 @@ const ContentContainer = styled.div`
 			}
 
 			p {
-				font-size: 2rem;
+				font-size: 1.8rem;
 			}
 		}
 	}
