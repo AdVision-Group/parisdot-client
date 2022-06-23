@@ -12,9 +12,10 @@ import Head from "next/head"
 import Header from "../components/header/header.component"
 import HeroSection from "../components/hero-section/hero-section.component"
 import AboutSection from "../components/about-section/about-section.component"
-import EventSection from "../components/event-section/event-section.component"
+// import EventSection from "../components/event-section/event-section.component"
+// import HackathonSection from "../components/hackathon-section/hackathon-section.component"
+import VenueSection from "../components/venue-section/venue-section.component"
 import FooterSection from "../components/footer-section/footer-section.component"
-import HackathonSection from "../components/hackathon-section/hackathon-section.component"
 // import EventOverview from "../components/event-overview/event-overview.component"
 // import WorkshopSection from "../components/workshop-section/workshop-section.component"
 // import Accordion from "../components/accordion/accordion.component"
@@ -135,6 +136,7 @@ const Home: NextPage = () => {
 
 			<HeroSection />
 			<AboutSection />
+			<VenueSection />
 			<FooterSection />
 			{/* <EventSection /> */}
 			{/* <HackathonSection /> */}

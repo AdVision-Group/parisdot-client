@@ -545,7 +545,7 @@ const ImageContainer = styled.figure`
 			position: relative;
 			width: 25rem;
 			/* height: 30rem; */
-			margin-bottom: 4rem;
+			/* margin-bottom: 4rem; */
 			margin-right: 5rem;
 			/* border: 1px solid green; */
 		}
