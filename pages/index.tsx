@@ -105,7 +105,7 @@ const Home: NextPage = () => {
 				<meta name="title" content="parisDOT Conf Hack" />
 				<meta
 					name="description"
-					content="3 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
+					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
 				/>
 
 				{/* <!-- Open Graph / Facebook --> */}
@@ -114,7 +114,7 @@ const Home: NextPage = () => {
 				<meta property="og:title" content="parisDOT Conf Hack" />
 				<meta
 					property="og:description"
-					content="3 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
+					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
 				/>
 				<meta property="og:image" content="/assets/meta-v2.png" />
 
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
 				<meta property="twitter:title" content="parisDOT Conf Hack" />
 				<meta
 					property="twitter:description"
-					content="3 days of conf & hack, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
+					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
 				/>
 				<meta property="twitter:image" content="/assets/meta-v2.png" />
 			</Head>
