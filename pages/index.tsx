@@ -101,7 +101,7 @@ const Home: NextPage = () => {
 		<React.Fragment>
 			<Head>
 				{/* <!-- Primary Meta Tags --> */}
-				<title>parisDOT Conf Hack</title>
+				<title>parisDOT Conf W-shops</title>
 				<meta name="title" content="parisDOT Conf W-shops" />
 				<meta
 					name="description"
