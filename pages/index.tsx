@@ -102,7 +102,7 @@ const Home: NextPage = () => {
 			<Head>
 				{/* <!-- Primary Meta Tags --> */}
 				<title>parisDOT Conf Hack</title>
-				<meta name="title" content="parisDOT Conf Hack" />
+				<meta name="title" content="parisDOT Conf W-shops" />
 				<meta
 					name="description"
 					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 				{/* <!-- Open Graph / Facebook --> */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content="https://parisdot.comm/" />
-				<meta property="og:title" content="parisDOT Conf Hack" />
+				<meta property="og:title" content="parisDOT Conf W-shops" />
 				<meta
 					property="og:description"
 					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
 				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content="https://parisdot.comm/" />
-				<meta property="twitter:title" content="parisDOT Conf Hack" />
+				<meta property="twitter:title" content="parisDOT Conf W-shops" />
 				<meta
 					property="twitter:description"
 					content="3 days of conference and workshops, organized by leading Polkadot projects for the broader crypto family. 6/19 - 21 in Paris, France"
