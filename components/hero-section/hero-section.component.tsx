@@ -186,7 +186,7 @@ const HeroSection: React.FC = () => {
 						<HeadContainer>
 							<h1>
 								<span>CONF</span>
-								<span>HACK</span>
+								<span>W-SHOP</span>
 							</h1>
 						</HeadContainer>
 						<DateContainer>
@@ -479,7 +479,7 @@ const HeadContainer = styled.div`
 		/* padding-right: 4rem; */
 		span {
 			display: block;
-			font-size: 5.7rem;
+			font-size: 4.4rem;
 		}
 	}
 
@@ -501,7 +501,7 @@ const HeadContainer = styled.div`
 	@media all and (min-width: ${({ theme }) => theme.breakpoints.md}) {
 		h1 {
 			span {
-				font-size: 8rem;
+				font-size: 6rem;
 				line-height: 1;
 			}
 		}
@@ -511,13 +511,13 @@ const HeadContainer = styled.div`
 			margin-bottom: unset;
 		}
 
-		/* @media all and (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+		@media all and (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 			h1 {
 				span {
-					font-size: 15rem;
+					font-size: 8rem;
 				}
 			}
-		} */
+		}
 	}
 `
 

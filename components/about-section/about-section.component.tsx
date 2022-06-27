@@ -116,8 +116,8 @@ const AboutSection = () => {
 					<ContentContainer>
 						<h2>WHAT IS PARISDOT?</h2>
 						<p>
-							3 days of conf & hack sessions organized by some of the leading
-							projects of the Polkadot and Kusama ecosystems.
+							3 days of conference and workshops sessions organized by some of
+							the leading projects of the Polkadot and Kusama ecosystems.
 						</p>
 						<PartnersContainer>
 							{partners.map((i, idx) => (
