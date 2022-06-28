@@ -135,7 +135,7 @@ const Header: React.FC<IProps> = ({
 						</a> */}
 						{/* </Link> */}
 						<a
-							href="https://twitter.com/Paris_Dot_Comm"
+							href="https://twitter.parisdotcomm.org/"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
@@ -152,7 +152,7 @@ const Header: React.FC<IProps> = ({
 						</a>
 						<a
 							// href="https://discord.gg/uKf968bd"
-							href="https://discord.gg/pdCkfn9Pwr"
+							href="https://discord.parisdotcomm.org/"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
