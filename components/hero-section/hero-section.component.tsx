@@ -15,9 +15,9 @@ const HeroSection: React.FC = () => {
 
 	// scrollYProgress.onChange((e) => console.log(e))
 
-	const transformPA = useTransform(scrollYProgress, [0, 1.5], [0, 85])
-	const transformRIS = useTransform(scrollYProgress, [0, 1.5], [0, -85])
-	const transformPARIS = useTransform(scrollYProgress, [0, 1.5], [0, -85])
+	const transformPA = useTransform(scrollYProgress, [0, 1], [0, 85])
+	const transformRIS = useTransform(scrollYProgress, [0, 1], [0, -85])
+	const transformPARIS = useTransform(scrollYProgress, [0, 1], [0, -85])
 
 	const partners = [
 		{
@@ -25,62 +25,62 @@ const HeroSection: React.FC = () => {
 			alt: "hydra logo",
 			href: "https://hydradx.io/",
 		},
-		{
-			src: "/assets/partners-v2/logos/basilisk-v2.png",
-			alt: "basilisk logo",
-			href: "https://bsx.fi/",
-		},
-		{
-			src: "/assets/partners-v2/logos/logo-polkadot.png",
-			alt: "polkadot logo",
-			href: "https://polkadot.network/",
-		},
-		{
-			src: "/assets/partners-v2/logos/acala-logo.png",
-			alt: "acala network logo",
-			href: "https://acala.network/",
-		},
+		// {
+		// 	src: "/assets/partners-v2/logos/basilisk-v2.png",
+		// 	alt: "basilisk logo",
+		// 	href: "https://bsx.fi/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/logo-polkadot.png",
+		// 	alt: "polkadot logo",
+		// 	href: "https://polkadot.network/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/acala-logo.png",
+		// 	alt: "acala network logo",
+		// 	href: "https://acala.network/",
+		// },
 		{
 			src: "/assets/partners-v2/logos/Parity.png",
 			alt: "parity logo",
 			href: "https://www.parity.io/",
 		},
-		{
-			src: "/assets/partners-v2/logos/talisman-logo.png",
-			alt: "talisman logo",
-			href: "https://talisman.xyz/",
-			width: 80,
-		},
-		{
-			src: "/assets/partners-v2/logos/Interplay.png",
-			alt: "interplay logo",
-			href: "https://interplay.iterate.ai/",
-			width: 50,
-		},
-		{
-			src: "/assets/partners-v2/logos/Subsquid.png",
-			alt: "subsquid logo",
-			href: "https://www.subsquid.io/",
-		},
-		{
-			src: "/assets/partners-v2/ORIGIN-TRAIL.png",
-			alt: "origin trail logo",
-			href: "https://origintrail.io/",
-			width: 70,
-		},
+		// {
+		// 	src: "/assets/partners-v2/logos/talisman-logo.png",
+		// 	alt: "talisman logo",
+		// 	href: "https://talisman.xyz/",
+		// 	width: 80,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Interplay.png",
+		// 	alt: "interplay logo",
+		// 	href: "https://interplay.iterate.ai/",
+		// 	width: 50,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Subsquid.png",
+		// 	alt: "subsquid logo",
+		// 	href: "https://www.subsquid.io/",
+		// },
+		// {
+		// 	src: "/assets/partners-v2/ORIGIN-TRAIL.png",
+		// 	alt: "origin trail logo",
+		// 	href: "https://origintrail.io/",
+		// 	width: 70,
+		// },
 
-		{
-			src: "/assets/partners-v2/logos/DFG.png",
-			alt: "dfg logo",
-			href: "https://www.dfg.group/",
-			width: 80,
-		},
-		{
-			src: "/assets/partners-v2/logos/Centrifuge.png",
-			alt: "centrifuge logo",
-			href: "https://centrifuge.io/",
-			width: 80,
-		},
+		// {
+		// 	src: "/assets/partners-v2/logos/DFG.png",
+		// 	alt: "dfg logo",
+		// 	href: "https://www.dfg.group/",
+		// 	width: 80,
+		// },
+		// {
+		// 	src: "/assets/partners-v2/logos/Centrifuge.png",
+		// 	alt: "centrifuge logo",
+		// 	href: "https://centrifuge.io/",
+		// 	width: 80,
+		// },
 		{
 			src: "/assets/partners-v2/logos/Moonbeam-Logo.png",
 			alt: "moonbeam logo",
@@ -745,7 +745,7 @@ const PartnersContainer = styled.div`
 		max-width: 15rem;
 		/* height: 3rem; */
 		position: relative;
-		filter: blur(0.5rem);
+		/* filter: blur(0.5rem); */
 	}
 	/* max-width: 30rem;
 	width: 100%;

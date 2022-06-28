@@ -151,7 +151,8 @@ const Header: React.FC<IProps> = ({
 							</motion.figure>
 						</a>
 						<a
-							href="https://discord.gg/uKf968bd"
+							// href="https://discord.gg/uKf968bd"
+							href="https://discord.gg/pdCkfn9Pwr"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
