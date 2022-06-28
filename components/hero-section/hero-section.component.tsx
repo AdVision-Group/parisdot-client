@@ -26,37 +26,37 @@ const HeroSection: React.FC = () => {
 			href: "https://hydradx.io/",
 		},
 		// {
-		// 	src: "/assets/partners-v2/logos/basilisk-v2.png",
-		// 	alt: "basilisk logo",
-		// 	href: "https://bsx.fi/",
+		// 	src: "/assets/partners-v2/logos-v2/polkadot.png",
+		// 	alt: "poladot logo",
+		// 	href: "https://polkadot.network/",
 		// },
 		// {
 		// 	src: "/assets/partners-v2/logos/logo-polkadot.png",
 		// 	alt: "polkadot logo",
 		// 	href: "https://polkadot.network/",
 		// },
-		// {
-		// 	src: "/assets/partners-v2/logos/acala-logo.png",
-		// 	alt: "acala network logo",
-		// 	href: "https://acala.network/",
-		// },
 		{
-			src: "/assets/partners-v2/logos/Parity.png",
-			alt: "parity logo",
-			href: "https://www.parity.io/",
+			src: "/assets/partners-v2/logos-v2/manta.png",
+			alt: "manta network logo",
+			href: "https://www.manta.network/",
 		},
 		// {
-		// 	src: "/assets/partners-v2/logos/talisman-logo.png",
-		// 	alt: "talisman logo",
-		// 	href: "https://talisman.xyz/",
-		// 	width: 80,
+		// 	src: "/assets/partners-v2/logos/Parity.png",
+		// 	alt: "parity logo",
+		// 	href: "https://www.parity.io/",
 		// },
-		// {
-		// 	src: "/assets/partners-v2/logos/Interplay.png",
-		// 	alt: "interplay logo",
-		// 	href: "https://interplay.iterate.ai/",
-		// 	width: 50,
-		// },
+		{
+			src: "/assets/partners-v2/logos-v2/ztg.png",
+			alt: "Zeitgeist logo",
+			href: "https://zeitgeist.pm/",
+			// width: 80,
+		},
+		{
+			src: "/assets/partners-v2/logos-v2/shiden.png",
+			alt: "shiden logo",
+			href: "https://shiden.astar.network/",
+			width: 50,
+		},
 		// {
 		// 	src: "/assets/partners-v2/logos/Subsquid.png",
 		// 	alt: "subsquid logo",
@@ -93,12 +93,30 @@ const HeroSection: React.FC = () => {
 			width: 50,
 			height: 40,
 		},
-		// {
-		// 	src: "/assets/partners-v2/logos/phala-network-logo-white.png",
-		// 	alt: "phala network logo",
-		// 	href: "https://www.phala.network/en/",
-		// 	width: 90,
-		// },
+		{
+			src: "/assets/partners-v2/logos/phala-network-logo-white.png",
+			alt: "phala network logo",
+			href: "https://www.phala.network/en/",
+			width: 90,
+		},
+		{
+			src: "/assets/partners-v2/logos-v2/unique.png",
+			alt: "unique logo",
+			href: "https://unique.network/",
+			// width: 90,
+		},
+		{
+			src: "/assets/partners-v2/logos-v2/dot_validator_alliance.png",
+			alt: "dot validator alliance logo",
+			href: "https://dotvalidators.org/",
+			width: 50,
+		},
+		{
+			src: "/assets/partners-v2/logos-v2/logion.png",
+			alt: "logion logo",
+			href: "https://logion.network/",
+			width: 50,
+		},
 	]
 
 	return (
@@ -241,7 +259,7 @@ const HeroSection: React.FC = () => {
 						</PlaceContainer>
 					</ContentContainer>
 					<PartnersContainer>
-						{/* {partners.map((partner, idx) => (
+						{partners.map((partner, idx) => (
 							<a
 								key={idx}
 								href={partner.href}
@@ -268,10 +286,10 @@ const HeroSection: React.FC = () => {
 									/>
 								</motion.figure>
 							</a>
-						))} */}
-						<PartnersOverlay>
+						))}
+						{/* <PartnersOverlay>
 							<p>SPONSORS TBA</p>
-						</PartnersOverlay>
+						</PartnersOverlay> */}
 					</PartnersContainer>
 				</Container>
 			</SectionContainer>
@@ -732,10 +750,10 @@ const PartnersContainer = styled.div`
 	justify-content: center; */
 	/* grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); */
 	width: 100%;
-	max-width: 70rem;
+	max-width: 60rem;
 	margin-left: auto;
-	gap: 1.5rem;
-	margin: 1rem auto 0;
+	gap: 2.5rem;
+	margin: 3rem auto 0;
 	padding-top: 0.5rem;
 
 	figure {
@@ -756,7 +774,7 @@ const PartnersContainer = styled.div`
 			max-width: 50rem;
 		}
 	} */
-	&:after {
+	/* &:after {
 		content: " ";
 		position: absolute;
 		width: 100%;
@@ -766,7 +784,7 @@ const PartnersContainer = styled.div`
 		left: 0;
 		right: 0;
 		filter: blur(0.5rem);
-	}
+	} */
 `
 
 const PartnersOverlay = styled.div`
