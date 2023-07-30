@@ -1,6 +1,6 @@
-#  Basilisk DeFi & NFTs Website
+#  AmsterDOT Crypto Conference Website
 
-This repository contains the code for the representative website of https://bsx.fi/.
+This repository contains the code for the representative website of https://amsterdot.io/.
 
 ## Technologies
 - React
