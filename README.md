@@ -1,7 +1,6 @@
-# Legacy ParisDot Crypto Conference Website
+#  Basilisk DeFi & NFTs Website
 
-This is a legacy repository for the ParisDot crypto conference.
-For the current version, refer to https://github.com/AdVision-Group/parisdot-v2-client
+This repository contains the code for the representative website of https://bsx.fi/.
 
 ## Technologies
 - React
